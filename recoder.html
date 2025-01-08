@@ -284,16 +284,19 @@
 				* توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
 
 			</div>
-            <hr />
+
+        </div>
+        <div class="form-container">
+	     
             <div class="form-control rtl">
 * 			کلماتي که انتخاب ميکنيد نبايد تکراري باشد وگرنه سيستم دچار مشکل ميشود.
             </div>
-        </div>
-        <div class="form-container">
-
+		<hr />
             <form id="configForm">
             	<!--- ////////////////////////////  URL  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                 <details open>
+
+			
                     <summary><h2>آدرس هاي دسترسي به پنل</h2></summary>
                     <div class="form-control">
                         <label for="panel">/panel</label>
@@ -605,7 +608,7 @@
                      BPB</a>
                  &nbsp;&nbsp; - &nbsp;&nbsp;
 
-                <a class="link" href="https://bit.ly/4ichkOs" style="color: var(--color);" target="_blank">
+                <a class="link" href="https://github.com/liMilCo/BPB-ReCoder" style="color: var(--color);" target="_blank">
                 	<i class="fa fa-github" style="font-size:36px; margin-right: 10px;vertical-align:middle;"></i>
                 	ReCoder</a>
 
@@ -626,7 +629,8 @@
                 const isDarkMode = document.body.classList.toggle('dark-mode');
                 localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
             });
-            for (const inputSave of inputsSave) {            	     const inputSaveEl = document.getElementById(inputSave);
+            for (const inputSave of inputsSave) {
+            	     const inputSaveEl = document.getElementById(inputSave);
             	     inputSaveEl.value = localStorage.getItem(inputSave);
             }
 
@@ -647,7 +651,8 @@
 
         const applySettings = async (event, configForm) => {
             event.preventDefault();
-            event.stopPropagation();        	    const inputsData = document.getElementsByName('bpbdata');
+            event.stopPropagation();
+        	    const inputsData = document.getElementsByName('bpbdata');
                 const SrcCode  = document.getElementById('maincode');
                 const GenCode  = document.getElementById('gencode');
                 const obfButton  = document.getElementById('obfButton');
@@ -660,7 +665,8 @@
         	    for (const inData of inputsData) {
         	        const SrchData  = document.getElementById('_'+inData.id);
         	        var SrchPrfx;
-        	        if(SrchData.value.startsWith("env.")){SrchPrfx = "env."}else if(SrchData.value.startsWith("/")){SrchPrfx = "/"}else{SrchPrfx = ""}        	    	//alert(SrchData.value +" = "+ inData.value +" - "+inData.id+" + "+SrchPrfx);
+        	        if(SrchData.value.startsWith("env.")){SrchPrfx = "env."}else if(SrchData.value.startsWith("/")){SrchPrfx = "/"}else{SrchPrfx = ""}
+        	    	//alert(SrchData.value +" = "+ inData.value +" - "+inData.id+" + "+SrchPrfx);
         	    	if(inData.value){
 	        	    	TheCode = TheCode.replaceAll(SrchData.value, SrchPrfx + inData.value);
         	    	}
@@ -668,7 +674,8 @@
         	    }
 
                 const HomePage  = document.getElementById('homePage');
-                if(HomePage.value){                	  TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
+                if(HomePage.value){
+                	  TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
                 	  localStorage.setItem('homePage', HomePage.value);
                 }
 
@@ -683,7 +690,8 @@
         }
 
 
-        const ObfuscationNewCode = () => {                const GenCode  = document.getElementById('gencode');
+        const ObfuscationNewCode = () => {
+                const GenCode  = document.getElementById('gencode');
                 const obfCode  = document.getElementById('obfcode');
                 const obfCopyButton  = document.getElementById('obfCopyButton');
                 const obfDnldButton  = document.getElementById('obfDnldButton');
@@ -768,7 +776,8 @@
 
 
 
-        const CopyNewCode = (id) => {        	 const GenCode  = document.getElementById(id);
+        const CopyNewCode = (id) => {
+        	 const GenCode  = document.getElementById(id);
         	 if(GenCode.value){copyToClipboard(GenCode.value);}
         }
 
