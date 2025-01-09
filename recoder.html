@@ -423,7 +423,7 @@
                         <label for="trojanRemoteSocketToWS">trojanRemoteSocketToWS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('trojanRemoteSocketToWS')">🎁</a></label>
                         <input type="text" id="trojanRemoteSocketToWS" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_trojanRemoteSocketToWS" value="trojanRemoteSocketToWS">
-                    </div>                   
+                    </div>
                     <div class="form-control">
                         <label for="parseTrojanHeader">parseTrojanHeader() <a title="Generate Random Functions Name" class="random" onclick="setRandom('parseTrojanHeader')">🎁</a></label>
                         <input type="text" id="parseTrojanHeader" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
@@ -870,8 +870,16 @@ function CheckBPBVrsion(){
         if(MaxVersion < BPBVersion){
         	 alert("⚠️ This BPB version is not supported. ReCoding mey not work well !");
         	 document.getElementById('errorVersion').style.display = 'block';
-        }else{
+             }else{
         	 document.getElementById('errorVersion').style.display = 'none';
+        }
+        //
+        if(BPBVersion >= 3){
+        	      document.getElementById('_envbpb').value = 'env.kv';
+        	      document.getElementById('_envtrojanpass').value = 'env.TR_PASS';
+        }else{
+         	      document.getElementById('_envbpb').value = 'env.bpb';
+        	      document.getElementById('_envtrojanpass').value = 'env.TROJAN_PASS';
         }
 }
     </script>
