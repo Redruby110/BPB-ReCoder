@@ -270,16 +270,28 @@
             }
             .rtl {direction:rtl; font-family: 'B Titr', Tahoma;}
             a {cursor: pointer;}
+
             .note, .form-control.rtl  {display: block;color:#F80;}
+            .errorBox, .form-control.errorBox {
+            	display: none;
+            	color: #F00 !important;
+            	font-size: large;
+    			text-align: center;
+    		}
         </style>
     </head>
     <body>
         <h1 class="rtl">تغيير کلمات کليدي پنل</h1>
         <div class="form-container">
             <h2>کد اصلي پروژه را وارد کنيد:</h2>
-            <div class="table-container">
-                <textarea id="maincode"></textarea>
+            <div id="errorVersion" class=" form-control rtl errorBox">
+                  👈 توجه اين نسخه از پروژه پشتيباني نميشود و کدگزاري مجدد درست عمل نخواهد کرد ! 👉
             </div>
+            <div class="table-container">
+                <textarea id="maincode" onchange="CheckBPBVrsion()"></textarea>
+            </div>
+
+
             <div class="form-control rtl note">
 				* توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
                 <br>
@@ -624,11 +636,28 @@
         </button>
     <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
     <script>
+    	let MaxVersion = 2.81;
+
         localStorage.getItem('darkMode') === 'enabled' && document.body.classList.add('dark-mode');
         let inputsSave = ["panel","login","secrets","homePage","envbpb","envuuid","envtrojanpass","envproxyip"];
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const configForm = document.getElementById('configForm');
+
+        const inputsData = document.getElementsByName('bpbdata');
+        const SrcCode  = document.getElementById('maincode');
+        const GenCode  = document.getElementById('gencode');
+        const obfButton  = document.getElementById('obfButton');
+        const applyCopyButton  = document.getElementById('applyCopyButton');
+        const applyDnldButton  = document.getElementById('applyDnldButton');
+
+
+        const obfCode  = document.getElementById('obfcode');
+        const obfCopyButton  = document.getElementById('obfCopyButton');
+        const obfDnldButton  = document.getElementById('obfDnldButton');
+
         document.addEventListener('DOMContentLoaded', async () => {
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const configForm = document.getElementById('configForm');
+
 
             darkModeToggle.addEventListener('click', () => {
                 const isDarkMode = document.body.classList.toggle('dark-mode');
@@ -640,7 +669,7 @@
             }
 
         });
-       configForm.addEventListener('submit', (event) => applySettings(event, configForm));
+       configForm.addEventListener('submit', (event) => applySettings());
 
 
 
@@ -654,15 +683,10 @@
             alert('📋 Copied to clipboard:\n\n');
         }
 
-        const applySettings = async (event, configForm) => {
+        const applySettings = async () => {
             event.preventDefault();
             event.stopPropagation();
-        	    const inputsData = document.getElementsByName('bpbdata');
-                const SrcCode  = document.getElementById('maincode');
-                const GenCode  = document.getElementById('gencode');
-                const obfButton  = document.getElementById('obfButton');
-                const applyCopyButton  = document.getElementById('applyCopyButton');
-                const applyDnldButton  = document.getElementById('applyDnldButton');
+
                 var TheCode = SrcCode.value;
                 if(!TheCode){alert("Please insert BPB Original Code.");SrcCode.focus();return false;}
                 if(IsDuplicates(inputsData) != ''){alert("The word ["+IsDuplicates(inputsData)+"] used more than once!");return false;}
@@ -696,10 +720,7 @@
 
 
         const ObfuscationNewCode = () => {
-                const GenCode  = document.getElementById('gencode');
-                const obfCode  = document.getElementById('obfcode');
-                const obfCopyButton  = document.getElementById('obfCopyButton');
-                const obfDnldButton  = document.getElementById('obfDnldButton');
+
                 var TheCode = GenCode.value;
                 if(TheCode == ''){alert("First Generate New Code!");return false;}
 
@@ -782,13 +803,13 @@
 
 
         const CopyNewCode = (id) => {
-        	 const GenCode  = document.getElementById(id);
-        	 if(GenCode.value){copyToClipboard(GenCode.value);}
+        	 const CopyNewCodeEl  = document.getElementById(id);
+        	 if(CopyNewCodeEl.value){copyToClipboard(CopyNewCodeEl.value);}
         }
 
         const setRandom = (id) => {
-        	 const Element = document.getElementById(id);
-        	 if(!Element.value){Element.value = generateRandom();}
+        	 const setRandomEl = document.getElementById(id);
+        	 if(!setRandomEl.value){setRandomEl.value = generateRandom();}
         }
 
              function generateRandom() {
@@ -827,6 +848,29 @@ function downloadCode(filename, text) {
   document.body.removeChild(element);
 }
 
+function GetBPBVrsion() {
+	var BPBVersion = 2;
+         if(SrcCode.value){
+         var versionMatch = SrcCode.value.match(/panelVersion\s*=\s*"(.*?)"/);
+         	if (versionMatch && versionMatch[1]) {
+         	     BPBVersion = versionMatch[1].split(".")[0]+"."+versionMatch[1].split(".")[1]+versionMatch[1].split(".")[2];
+         	     BPBVersion = parseFloat(BPBVersion);
+         	}
+         }
+
+         return BPBVersion;
+}
+
+function CheckBPBVrsion(){
+		var BPBVersion = GetBPBVrsion();
+
+        if(MaxVersion < BPBVersion){
+        	 alert("⚠️ This BPB version is not supported. ReCoding mey not work well !");
+        	 document.getElementById('errorVersion').style.display = 'block';
+        }else{
+        	 document.getElementById('errorVersion').style.display = 'none';
+        }
+}
     </script>
     </body>
     </html>
