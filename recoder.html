@@ -655,6 +655,7 @@
         const obfCode  = document.getElementById('obfcode');
         const obfCopyButton  = document.getElementById('obfCopyButton');
         const obfDnldButton  = document.getElementById('obfDnldButton');
+        const HomePage  = document.getElementById('homePage');
 
         document.addEventListener('DOMContentLoaded', async () => {
 
@@ -667,6 +668,8 @@
             	     const inputSaveEl = document.getElementById(inputSave);
             	     inputSaveEl.value = localStorage.getItem(inputSave);
             }
+            HomePage.value = localStorage.getItem('homePage');
+
 
         });
        configForm.addEventListener('submit', (event) => applySettings());
@@ -680,7 +683,7 @@
             textarea.select();
             document.execCommand('copy');
             document.body.removeChild(textarea);
-            alert('📋 Copied to clipboard:\n\n');
+            alert('📋 New Codes Copied to clipboard');
         }
 
         const applySettings = async () => {
@@ -702,7 +705,7 @@
                     if(inputsSave.includes(inData.id)){localStorage.setItem(inData.id, inData.value);}
         	    }
 
-                const HomePage  = document.getElementById('homePage');
+
                 if(HomePage.value){
                 	  TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
                 	  localStorage.setItem('homePage', HomePage.value);
