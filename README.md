@@ -1,3 +1,5 @@
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 # شخصی سازی پنل BPB 💦
 😎 با کمک [این سایت](https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html) :   
 https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html
