@@ -710,8 +710,10 @@
                 	  TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
                 	  localStorage.setItem('homePage', HomePage.value);
                 }
+                //remove Bundled license information
+                TheCode = TheCode.replaceAll(atob("LyohIEJ1bmRsZWQgbGljZW5zZSBpbmZvcm1hdGlvbjoKCmpzLXNoYTI1Ni9zcmMvc2hhMjU2LmpzOgogICgqKgogICAqIFtqcy1zaGEyNTZde0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9lbW4xNzgvanMtc2hhMjU2fQogICAqCiAgICogQHZlcnNpb24gMC4xMS4wCiAgICogQGF1dGhvciBDaGVuLCBZaS1DeXVhbiBbZW1uMTc4QGdtYWlsLmNvbV0KICAgKiBAY29weXJpZ2h0IENoZW4sIFlpLUN5dWFuIDIwMTQtMjAyNAogICAqIEBsaWNlbnNlIE1JVAogICAqKQoqLwovLyMgc291cmNlTWFwcGluZ1VSTD13b3JrZXIuanMubWFw"), "");
 
-
+                TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
                 applyCopyButton.disabled = false;
                 applyDnldButton.disabled = false;
                 obfButton.disabled = false;
@@ -868,12 +870,12 @@ function CheckBPBVrsion(){
 		var BPBVersion = GetBPBVrsion();
 
         if(MaxVersion < BPBVersion){
-        	 alert("⚠️ This BPB version is not supported. ReCoding may not work well !");
+        	 alert("⚠️ This BPB version is not supported. ReCoding mey not work well !");
         	 //document.getElementById('errorVersion').style.display = 'block';
         }else{
         	 //document.getElementById('errorVersion').style.display = 'none';
         }
-        //
+
         if(BPBVersion >= 3){
         	      document.getElementById('_envbpb').value = 'env.kv';
         	      document.getElementById('_envtrojanpass').value = 'env.TR_PASS';
