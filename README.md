@@ -11,7 +11,8 @@
 # اول
 
 ## کد های اصلی و خام پروژه BPB را در باکس اول وارد کنید:
-![image](https://github.com/user-attachments/assets/145586fd-7520-4c44-b2b7-8f8acddbb87e)
+![image](https://github.com/user-attachments/assets/32c52711-2d56-4eaa-b42f-c5eda4ff76f0)
+
 ### شما مي توانيد کد هاي خام ورژن 2.8.1 پروژه را از [اينجا ](https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js)و ورژن 2.7.4 را از [اينجا ](https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v2.7.4/worker.js)تهيه نماييد.
 
 
