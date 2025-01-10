@@ -865,7 +865,7 @@ function downloadCode(filename, text) {
 function GetBPBVrsion(InInt) {
 	var BPBVersion = 2;
          if(SrcCode.value){
-         var versionMatch = SrcCode.value.match(/panelVersion\s*=\s*"(.*?)"/);
+         var versionMatch = SrcCode.value.match(/panelVersion\s*=\s*[\"\'](.*?)[\"\']/);
          	if (versionMatch && versionMatch[1]) {
          	     BPBVersion = versionMatch[1];
          	}
@@ -878,7 +878,7 @@ function GetBPBVrsion(InInt) {
 }
 
 function CheckBPBVrsion(){
-		//var BPBVersion = GetBPBVrsion();
+	var BPBVersion = GetBPBVrsion();
 
         if(SrcCode.value.search("env.kv") > 1){
     			document.getElementById('_envbpb').value = 'env.kv';
@@ -912,7 +912,7 @@ function CheckBPBVrsion(){
     			document.getElementById("_"+OldWord).value = OldWord;
     		}
 	}
-
+  	alert("✔️ BPB v"+BPBVersion+" Loaded.");
 }
 
 function GetBPBCode(theUrl){
@@ -928,7 +928,6 @@ function SetBPBCode(BPBCodeLink){
        if(!BPBCodeLink){return false;}
   	   var  BPBCode = GetBPBCode(BPBCodeLink);
   	   SrcCode.value = BPBCode;
-  	   alert("✔️ BPB v"+GetBPBVrsion()+" Loaded.");
        CheckBPBVrsion();
 }
     </script>
