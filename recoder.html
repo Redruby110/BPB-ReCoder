@@ -83,6 +83,8 @@
                 color: var(--button-color);
                 border-color: var(--primary-color);
                 border: 1px solid;
+                margin-top: 10px;
+    			width: 98%;
             }
             #apply {display: block; margin-top: 20px;}
             input.button {font-weight: 600; font-size: 1.1rem;}
@@ -284,7 +286,7 @@
         <h1 class="rtl">تغيير کلمات کليدي پنل 💦</h1>
         <div class="form-container">
             <h2>کد اصلي پروژه را اینجا وارد کنيد:</h2>
-            <div id="errorVersion" class=" form-control rtl errorBox">
+            <div id="errorVersion" class=" form-control rtl errorBox" style="display: none;">
                   👈 توجه اين نسخه از پروژه پشتيباني نميشود و کدگزاري مجدد درست عمل نخواهد کرد ! 👉
             </div>
             <div class="table-container">
@@ -295,14 +297,20 @@
             <div class="form-control rtl note">
 				* توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
                 <br>
-#                شما مي توانيد کد هاي خام ورژن 2.8.1 پروژه را از
-                <a href="https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js" title="BPB 2.8.1" target="_blank"> اينجا </a>
-                و ورژن 2.7.4 را از
-                <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v2.7.4/worker.js" title="BPB 2.7.4" target="_blank"> اينجا </a>
-                تهيه نماييد.
+#                دریافت کد های پروژه:
+
+                &nbsp;&nbsp;
+                <a href="https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js" title="BPB 2.8.1" target="_blank">BPB 2.8.1</a>
+                -
+                <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v2.7.4/worker.js" title="BPB 2.7.4" target="_blank">BPB 2.7.4</a>
+                -
+                <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v3/unobfuscated-worker.js" title="BPB 3.0.0" target="_blank">BPB 3.0.0</a>
 			</div>
             <div class="form-control">
             	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js')">AutoLoad BPB 2.8.1</button>
+            	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/main/unobfuscated/worker.js')">AutoLoad BPB 3 Latest</button>
+
+
             </div>
         </div>
         <div class="form-container">
@@ -854,36 +862,57 @@ function downloadCode(filename, text) {
   document.body.removeChild(element);
 }
 
-function GetBPBVrsion() {
+function GetBPBVrsion(InInt) {
 	var BPBVersion = 2;
          if(SrcCode.value){
          var versionMatch = SrcCode.value.match(/panelVersion\s*=\s*"(.*?)"/);
          	if (versionMatch && versionMatch[1]) {
-         	     BPBVersion = versionMatch[1].split(".")[0]+"."+versionMatch[1].split(".")[1]+versionMatch[1].split(".")[2];
-         	     BPBVersion = parseFloat(BPBVersion);
+         	     BPBVersion = versionMatch[1];
          	}
          }
-
+         if(InInt){
+            BPBVersion = versionMatch[1].split(".")[0]+"."+versionMatch[1].split(".")[1]+versionMatch[1].split(".")[2];
+         	BPBVersion = parseFloat(BPBVersion);
+         }
          return BPBVersion;
 }
 
 function CheckBPBVrsion(){
-		var BPBVersion = GetBPBVrsion();
+		//var BPBVersion = GetBPBVrsion();
 
-        if(MaxVersion < BPBVersion){
-        	 alert("⚠️ This BPB version is not supported. ReCoding mey not work well !");
-        	 //document.getElementById('errorVersion').style.display = 'block';
-        }else{
-        	 //document.getElementById('errorVersion').style.display = 'none';
-        }
+        if(SrcCode.value.search("env.kv") > 1){
+    			document.getElementById('_envbpb').value = 'env.kv';
+    	}else{
+    			document.getElementById('_envbpb').value = 'env.bpb';
+    	}
+        if(SrcCode.value.search("env.TR_PASS") > 1){
+    			document.getElementById('_envtrojanpass').value = 'env.TR_PASS';
+    	}else{
+    			document.getElementById('_envtrojanpass').value = 'env.TROJAN_PASS';
+    	}
+        var NewWordVer = {
+        		"vlessOverWSHandler":"VLOverWSHandler",
+        		"trojanOverWSHandler":"TROverWSHandler",
+        		"processVlessHeader":"processVLHeader",
+        		"vlessRemoteSocketToWS":"VLRemoteSocketToWS",
+        		"parseTrojanHeader":"parseTRHeader",
+        		"trojanRemoteSocketToWS":"TRRemoteSocketToWS",
+        		"buildXrayVLESSOutbound":"buildXrayVLOutbound",
+        		"buildXrayTrojanOutbound":"buildXrayTROutbound",
+        		"buildSingBoxVLESSOutbound":"buildSingBoxVLOutbound",
+        		"buildSingBoxTrojanOutbound":"buildSingBoxTROutbound",
+        		"buildClashVLESSOutbound":"buildClashVLOutbound",
+        		"buildClashTrojanOutbound":"buildClashTROutbound"
 
-        if(BPBVersion >= 3){
-        	      document.getElementById('_envbpb').value = 'env.kv';
-        	      document.getElementById('_envtrojanpass').value = 'env.TR_PASS';
-        }else{
-         	      document.getElementById('_envbpb').value = 'env.bpb';
-        	      document.getElementById('_envtrojanpass').value = 'env.TROJAN_PASS';
-        }
+        	};
+        for (var OldWord in NewWordVer) {
+    		if(SrcCode.value.search(NewWordVer[OldWord]) > 1){
+    			document.getElementById("_"+OldWord).value = NewWordVer[OldWord];
+    		}else{
+    			document.getElementById("_"+OldWord).value = OldWord;
+    		}
+	}
+
 }
 
 function GetBPBCode(theUrl){
@@ -899,8 +928,8 @@ function SetBPBCode(BPBCodeLink){
        if(!BPBCodeLink){return false;}
   	   var  BPBCode = GetBPBCode(BPBCodeLink);
   	   SrcCode.value = BPBCode;
-  	   alert("✔️ BPB Code Loaded.");
-
+  	   alert("✔️ BPB v"+GetBPBVrsion()+" Loaded.");
+       CheckBPBVrsion();
 }
     </script>
     </body>
