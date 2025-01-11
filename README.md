@@ -113,4 +113,15 @@
 <img src="doc/9.png" width="100%">
 
 
+<details>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-THQL9EQWDS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-THQL9EQWDS');
+</script>
 <style> html {direction: rtl;} </style>
+</details> 
+
