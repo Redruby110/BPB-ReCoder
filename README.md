@@ -1,4 +1,13 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  </head>
+  <body>
+  
+    
 <h1 align="center">😎 شخصی سازی پنل BPB 💦 </h1>
 <h2 align="center">حل مشکل خطای 1011</h2>
 
@@ -98,3 +107,5 @@
 
 ![image](https://github.com/user-attachments/assets/4b5aa91a-1998-4e11-9236-d993a8fcca42)
 
+</body>
+</html>
