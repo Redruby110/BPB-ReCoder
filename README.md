@@ -1,5 +1,7 @@
 
 <h1 align="center">😎 شخصی سازی پنل BPB 💦 </h1>
+<h2 align="center">حل مشکل خطای 1011</h2>
+
 
 😎 با کمک [این سایت](https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html) :   
 <p align="left">https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html</p>
