@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="rtl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  </head>
-  <body>
+<div align="right" style="direction: rtl;">
   
     
 <h1 align="center">😎 شخصی سازی پنل BPB 💦 </h1>
 <h2 align="center">حل مشکل خطای 1011</h2>
 
 
-😎 با کمک [این سایت](https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html) :   
-<p align="left">https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html</p>
+😎 با کمک [این سایت](https://bpb.liwil.ir/recoder.html) :   
+<p align="left">
+  <a href="https://bpb.liwil.ir/recoder.html" target="_blank">https://bpb.liwil.ir/recoder.html</a>
+  <br>
+  یا
+  <br>
+  <a href="https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html" target="_blank">https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html</a>
+  
+  </p>
   <p align="justify">
 شما می توانید کد های پلن را کاملا شخصی سازی کنید.
 از انجا که کلودفلر با برسی کد ها، پروژه را شناسایی و بن میکند برای جلوگیری از ارور 1011 باید کلمات کلیدی مانند نام توابع، آدرس دسترسی به پنل و داده های متغیر و دیتابیس KV تغییر داده شود. پروژه هایی این کار را انجام داده اند اما بعد از یک مدت ممکن است این کد های جدید هم شناسایی شوند. بهترین راه حل این است که هر کاربر برای خود یک پنل با کدهای شخصی سازی شده بسازد و این برنامه این کار را برای شما انجام خواهد داد.
@@ -107,5 +107,5 @@
 
 ![image](https://github.com/user-attachments/assets/4b5aa91a-1998-4e11-9236-d993a8fcca42)
 
-</body>
-</html>
+</div>
+
