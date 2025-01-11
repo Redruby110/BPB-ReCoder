@@ -1,5 +1,3 @@
-<div align="right" style="direction: rtl;">
-  
     
 <h1 align="center">😎 شخصی سازی پنل BPB 💦 </h1>
 <h2 align="center">حل مشکل خطای 1011</h2>
@@ -116,8 +114,5 @@
 
 <img src="doc/9.png" width="100%">
 
-</div>
-<style>
 
-  html {direction: rtl;}
-</style>
+<style> html {direction: rtl;} </style>
