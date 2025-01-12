@@ -623,6 +623,14 @@
                     </div>
              </div>
             <h2>کد هاي obfuscator شده:</h2>
+            <div class=" form-control rtl">
+                 <label for="renameObf"> شکستن و تغيير تمام کلمات کليدي
+                  <input type="checkbox" id="renameObf" onchange="renGlobObf()">  </label>
+                  👈
+                  اين گزينه کلماتی مانند vless را میشکند و نام توابع را تغییر میدهد اما پروژه را سنگين تر و حجيم تر نيز خواهد کرد
+
+
+            </div>
             <div class="table-container">
                 <textarea id="obfcode" style="height: 20rem;"></textarea>
             </div>
@@ -733,87 +741,99 @@
         }
 
 
-        const ObfuscationNewCode = () => {
+        var renameGlobalsObf = false;
+        var splitStringsObf = false;
+
+        const renGlobObf  = () => {
+        	 if(document.getElementById('renameObf').checked){
+        	 	     renameGlobalsObf = splitStringsObf = true;
+        	 }else{
+        	 	     renameGlobalsObf = splitStringsObf = false;
+        	 }
+        }
+
+        const ObfuscationNewCode = async () => {
 
                 var TheCode = GenCode.value;
                 if(TheCode == ''){alert("First Generate New Code!");return false;}
 
-                    const obfButton  = document.getElementById('obfButton');
                     document.body.style.cursor = 'wait';
                     const obfButtonVal = obfButton.value;
                     obfButton.value = '⌛ Loading...';
 
- //var JavaScriptObfuscator = require('javascript-obfuscator');
-                var obfuscationResult = JavaScriptObfuscator.obfuscate(TheCode,
+                //var JavaScriptObfuscator = require('javascript-obfuscator');
+                var obfuscationResult = await JavaScriptObfuscator.obfuscate(TheCode,
                     {
-    "compact": true,
-    "config": "",
-    "controlFlowFlattening": false,
-    "controlFlowFlatteningThreshold": 0.75,
-    "deadCodeInjection": false,
-    "deadCodeInjectionThreshold": 0.4,
-    "debugProtection": false,
-    "debugProtectionInterval": 0,
-    "disableConsoleOutput": false,
-    "domainLock": [],
-    "domainLockRedirectUrl": "about:blank",
-    "exclude": [],
-    "forceTransformStrings": [],
-    "identifierNamesCache": null,
-    "identifierNamesGenerator": "hexadecimal",
-    "identifiersPrefix": "",
-    "identifiersDictionary": [],
-    "ignoreImports": false,
-    "inputFileName": "",
-    "log": false,
-    "numbersToExpressions": false,
-    "optionsPreset": "default",
-    "renameGlobals": false,
-    "renameProperties": false,
-    "renamePropertiesMode": "safe",
-    "reservedNames": [],
-    "reservedStrings": [],
-    "stringArrayRotate": true,
-    "seed": 0,
-    "selfDefending": false,
-    "stringArrayShuffle": true,
-    "simplify": true,
-    "sourceMap": false,
-    "sourceMapBaseUrl": "",
-    "sourceMapFileName": "",
-    "sourceMapMode": "separate",
-    "sourceMapSourcesMode": "sources-content",
-    "splitStrings": false,
-    "splitStringsChunkLength": 10,
-    "stringArray": true,
-    "stringArrayCallsTransform": false,
-    "stringArrayCallsTransformThreshold": 0.5,
-    "stringArrayEncoding": [
-        "none"
-    ],
-    "stringArrayIndexesType": [
-        "hexadecimal-number"
-    ],
-    "stringArrayIndexShift": true,
-    "stringArrayWrappersChainedCalls": true,
-    "stringArrayWrappersCount": 1,
-    "stringArrayWrappersParametersMaxCount": 2,
-    "stringArrayWrappersType": "variable",
-    "stringArrayThreshold": 0.75,
-    "target": "browser",
-    "transformObjectKeys": false,
-    "unicodeEscapeSequence": false
+    					"compact": true,
+    					"config": "",
+    					"controlFlowFlattening": false,
+    					"controlFlowFlatteningThreshold": 0.75,
+    					"debugProtection": false,
+    					"debugProtectionInterval": 0,
+    					"disableConsoleOutput": false,
+    					"domainLock": [],
+    					"domainLockRedirectUrl": "about:blank",
+    					"exclude": [],
+    					"forceTransformStrings": [],
+    					"identifierNamesCache": null,
+    					"identifierNamesGenerator": "hexadecimal",
+    					"identifiersPrefix": "",
+    					"identifiersDictionary": [],
+    					"ignoreImports": false,
+    					"inputFileName": "",
+    					"log": false,
+    					"numbersToExpressions": false,
+    					"optionsPreset": "default",
+    					"renameProperties": false,
+    					"renamePropertiesMode": "safe",
+    					"reservedNames": [],
+    					"reservedStrings": [],
+    					"stringArrayRotate": true,
+    					"seed": 0,
+    					"selfDefending": false,
+    					"stringArrayShuffle": true,
+    					"simplify": true,
+    					"sourceMap": false,
+    					"sourceMapBaseUrl": "",
+    					"sourceMapFileName": "",
+    					"sourceMapMode": "separate",
+    					"sourceMapSourcesMode": "sources-content",
+    					"stringArray": true,
+    					"stringArrayCallsTransform": false,
+    					"stringArrayCallsTransformThreshold": 0.5,
+    					"stringArrayEncoding": [
+    					    					"none"
+    					],
+    					"stringArrayIndexesType": [
+    					    					"hexadecimal-number"
+    					],
+    					"stringArrayIndexShift": true,
+    					"stringArrayWrappersChainedCalls": true,
+    					"stringArrayWrappersCount": 1,
+    					"stringArrayWrappersParametersMaxCount": 2,
+    					"stringArrayWrappersType": "variable",
+    					"stringArrayThreshold": 0.75,
+    					"unicodeEscapeSequence": false,
+    					"deadCodeInjection": false,
+    					"deadCodeInjectionThreshold": 0.4,
+    					"renameGlobals": renameGlobalsObf,
+    					"splitStrings": splitStringsObf,
+    					"splitStringsChunkLength": 2,
+    					"transformObjectKeys": false,
+    					"target": "node"
                     }
                 );
+
+
                 obfCopyButton.disabled = false;
                 obfDnldButton.disabled = false;
-                obfCode.value =  obfuscationResult.getObfuscatedCode();//
+                obfCode.value =  obfuscationResult.getObfuscatedCode();
 
                 document.body.style.cursor = 'default';
                 obfButton.value = obfButtonVal;
+
                 return;
         }
-
 
 
         const CopyNewCode = (id) => {
@@ -940,6 +960,6 @@ function SetBPBCode(BPBCodeLink){
 
   gtag('config', 'G-THQL9EQWDS');
 </script>
-	    
+
     </body>
     </html>
