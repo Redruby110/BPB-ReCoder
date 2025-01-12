@@ -5,11 +5,11 @@
 
 😎 به وسیله [این پروژه](https://github.com/liMilCo/BPB-ReCoder) :      https://liMilCo.github.io/BPB-ReCoder 
 <p align="left">
-  <a href="https://liMilCo.github.io/BPB-ReCoder/recoder.html" target="_blank">https://bpb.liwil.ir/recoder.html</a>
+  <a href="https://liMilCo.github.io/BPB-ReCoder/recoder.html">https://bpb.liwil.ir/recoder.html</a>
   <br>
   یا
   <br>
-  <a href="https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html" target="_blank">https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html</a>
+  <a href="https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html">https://raw.githack.com/liMilCo/BPB-ReCoder/main/recoder.html</a>
   
   </p>
   <p align="justify">
@@ -18,6 +18,8 @@
 </p>
 
 ## اول
+
+<a href="https://liMilCo.github.io/BPB-ReCoder/recoder.html" target="_blank">از اینجا وارد نرم افزار آنلاین شوید ...</a>
 
 ### کد های اصلی و خام پروژه BPB را در باکس اول وارد کنید:
 
