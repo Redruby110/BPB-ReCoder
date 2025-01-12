@@ -627,7 +627,7 @@
                  <label for="renameObf"> شکستن و تغيير تمام کلمات کليدي
                   <input type="checkbox" id="renameObf" onchange="renGlobObf()">  </label>
                   👈
-                  اين گزينه کلماتی مانند vless را میشکند و نام توابع را تغییر میدهد اما پروژه را سنگين تر و حجيم تر نيز خواهد کرد
+                  اين گزينه کلماتی مانند vless را میشکند اما پروژه را حجيم تر نيز خواهد کرد
 
 
             </div>
@@ -741,14 +741,14 @@
         }
 
 
-        var renameGlobalsObf = false;
+
         var splitStringsObf = false;
 
         const renGlobObf  = () => {
         	 if(document.getElementById('renameObf').checked){
-        	 	     renameGlobalsObf = splitStringsObf = true;
+        	 	     splitStringsObf = true;
         	 }else{
-        	 	     renameGlobalsObf = splitStringsObf = false;
+        	 	     splitStringsObf = false;
         	 }
         }
 
@@ -816,7 +816,7 @@
     					"unicodeEscapeSequence": false,
     					"deadCodeInjection": false,
     					"deadCodeInjectionThreshold": 0.4,
-    					"renameGlobals": renameGlobalsObf,
+    					"renameGlobals": false,
     					"splitStrings": splitStringsObf,
     					"splitStringsChunkLength": 2,
     					"transformObjectKeys": false,
@@ -853,7 +853,7 @@
                 const randomValues = new Uint8Array(16);
                 crypto.getRandomValues(randomValues);
 
-                for (let i = 0; i < 11; i++) {
+                for (let i = 0; i < 10; i++) {
                     password += charset[randomValues[i] % charset.length];
                 }
                 return password;
