@@ -3,7 +3,7 @@
 <h2 align="center">حل مشکل خطای 1011</h2>
 
 
-😎 به وسیله [این پروژه](https://liMilCo.github.io/BPB-ReCoder) :  https://liMilCo.github.io/BPB-ReCoder 
+😎 به وسیله [این پروژه](https://github.com/liMilCo/BPB-ReCoder) :      https://liMilCo.github.io/BPB-ReCoder 
 <p align="left">
   <a href="https://liMilCo.github.io/BPB-ReCoder/recoder.html" target="_blank">https://bpb.liwil.ir/recoder.html</a>
   <br>
