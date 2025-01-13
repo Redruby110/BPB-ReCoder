@@ -5,7 +5,7 @@
 
 😎 به وسیله [این پروژه](https://github.com/liMilCo/BPB-ReCoder) :      https://liMilCo.github.io/BPB-ReCoder 
 <p align="left">
-  <a href="https://liMilCo.github.io/BPB-ReCoder/recoder.html">https://bpb.liwil.ir/recoder.html</a>
+  <a href="https://liMilCo.github.io/BPB-ReCoder/recoder.html">https://liMilCo.github.io/BPB-ReCoder/recoder.html</a>
   <br>
   یا
   <br>
