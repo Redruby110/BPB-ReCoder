@@ -308,7 +308,7 @@
 			</div>
             <div class="form-control">
             	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js')">AutoLoad BPB 2.8.1</button>
-            	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/main/unobfuscated/worker.js')">AutoLoad BPB 3 Latest</button>
+            	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/main/unobfuscated/worker.js')">AutoLoad BPB Latest</button>
 
 
             </div>
@@ -362,6 +362,8 @@
                     </div>
                     <div class="form-control rtl">
                     * سايتي را انتخاب بکنيد که ساده و سبک باشد. سايت هاي شلوغ و سنگين فشار زيادي به سرور خواهند آورد.
+                    <br>
+                    * در ورژن های جدید می توانید با کلمه FALLBACK در تنظیمات (Variables and Secrets) کلودفلر این آدرس را تغییر دهید
                     </div>
 
                 </details>
@@ -654,8 +656,6 @@
         </button>
     <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
     <script>
-    	let MaxVersion = 2.81;
-
         localStorage.getItem('darkMode') === 'enabled' && document.body.classList.add('dark-mode');
         let inputsSave = ["panel","login","secrets","homePage","envbpb","envuuid","envtrojanpass","envproxyip"];
 
@@ -725,8 +725,12 @@
 
 
                 if(HomePage.value){
+                	if(TheCode.search("fallbackDomain = ") > 1){
+                      TheCode = TheCode.replaceAll('fallbackDomain = env.FALLBACK || "', 'fallbackDomain = env.FALLBACK || "'+HomePage.value+'"; //"');
+                	}else{
                 	  TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
-                	  localStorage.setItem('homePage', HomePage.value);
+                	}
+                	localStorage.setItem('homePage', HomePage.value);
                 }
                 //remove Bundled license information
                 TheCode = TheCode.replaceAll(atob("LyohIEJ1bmRsZWQgbGljZW5zZSBpbmZvcm1hdGlvbjoKCmpzLXNoYTI1Ni9zcmMvc2hhMjU2LmpzOgogICgqKgogICAqIFtqcy1zaGEyNTZde0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9lbW4xNzgvanMtc2hhMjU2fQogICAqCiAgICogQHZlcnNpb24gMC4xMS4wCiAgICogQGF1dGhvciBDaGVuLCBZaS1DeXVhbiBbZW1uMTc4QGdtYWlsLmNvbV0KICAgKiBAY29weXJpZ2h0IENoZW4sIFlpLUN5dWFuIDIwMTQtMjAyNAogICAqIEBsaWNlbnNlIE1JVAogICAqKQoqLwovLyMgc291cmNlTWFwcGluZ1VSTD13b3JrZXIuanMubWFw"), "");
