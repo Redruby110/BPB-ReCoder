@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BPB Panel Changer</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/155004885?s=32" type="image/ico" />
         <style>
             :root {
                 --color: black;
@@ -283,7 +284,7 @@
         </style>
     </head>
     <body>
-        <h1 class="rtl">تغيير کلمات کليدي پنل 💦</h1>
+        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8</h1>
         <div class="form-container">
             <h2>کد اصلي پروژه را اینجا وارد کنيد:</h2>
             <div id="errorVersion" class=" form-control rtl errorBox" style="display: none;">
@@ -298,13 +299,16 @@
 				* توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
                 <br>
 #                دریافت کد های پروژه:
-
-                &nbsp;&nbsp;
-                <a href="https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js" title="BPB 2.8.1" target="_blank">BPB 2.8.1</a>
-                -
+                    <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel" target="_blank">BPB-Worker-Panel</a>
+                <center>
                 <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v2.7.4/worker.js" title="BPB 2.7.4" target="_blank">BPB 2.7.4</a>
                 -
+                <a href="https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js" title="BPB 2.8.1" target="_blank">BPB 2.8.1</a>
+                -
                 <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v3/unobfuscated-worker.js" title="BPB 3.0.0" target="_blank">BPB 3.0.0</a>
+			    -
+                <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases" title="BPB 3.0.0" target="_blank">BPB Releases</a>
+			    <center>
 			</div>
             <div class="form-control">
             	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js')">AutoLoad BPB 2.8.1</button>
@@ -733,7 +737,8 @@
                 	localStorage.setItem('homePage', HomePage.value);
                 }
                 //remove Bundled license information
-                TheCode = TheCode.replaceAll(atob("LyohIEJ1bmRsZWQgbGljZW5zZSBpbmZvcm1hdGlvbjoKCmpzLXNoYTI1Ni9zcmMvc2hhMjU2LmpzOgogICgqKgogICAqIFtqcy1zaGEyNTZde0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9lbW4xNzgvanMtc2hhMjU2fQogICAqCiAgICogQHZlcnNpb24gMC4xMS4wCiAgICogQGF1dGhvciBDaGVuLCBZaS1DeXVhbiBbZW1uMTc4QGdtYWlsLmNvbV0KICAgKiBAY29weXJpZ2h0IENoZW4sIFlpLUN5dWFuIDIwMTQtMjAyNAogICAqIEBsaWNlbnNlIE1JVAogICAqKQoqLwovLyMgc291cmNlTWFwcGluZ1VSTD13b3JrZXIuanMubWFw"), "");
+
+                TheCode = AdvChng(TheCode);
 
                 applyCopyButton.disabled = false;
                 applyDnldButton.disabled = false;
@@ -744,7 +749,12 @@
 
         }
 
+        const AdvChng  = (mTheCode) => {
+        	 mTheCode = mTheCode.replaceAll(atob("LyohIEJ1bmRsZWQgbGljZW5zZSBpbmZvcm1hdGlvbjoKCmpzLXNoYTI1Ni9zcmMvc2hhMjU2LmpzOgogICgqKgogICAqIFtqcy1zaGEyNTZde0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9lbW4xNzgvanMtc2hhMjU2fQogICAqCiAgICogQHZlcnNpb24gMC4xMS4wCiAgICogQGF1dGhvciBDaGVuLCBZaS1DeXVhbiBbZW1uMTc4QGdtYWlsLmNvbV0KICAgKiBAY29weXJpZ2h0IENoZW4sIFlpLUN5dWFuIDIwMTQtMjAyNAogICAqIEBsaWNlbnNlIE1JVAogICAqKQoqLwovLyMgc291cmNlTWFwcGluZ1VSTD13b3JrZXIuanMubWFw"), "");
+             mTheCode = mTheCode.replaceAll('"bpb.yousef.isegaro.com"', 'atob("YnBiLnlvdXNlZi5pc2VnYXJvLmNvbQ==")');
 
+         	 return mTheCode;
+        }
 
         var splitStringsObf = false;
 
