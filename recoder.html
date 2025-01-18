@@ -752,6 +752,15 @@
         const AdvChng  = (mTheCode) => {
         	 mTheCode = mTheCode.replaceAll(atob("LyohIEJ1bmRsZWQgbGljZW5zZSBpbmZvcm1hdGlvbjoKCmpzLXNoYTI1Ni9zcmMvc2hhMjU2LmpzOgogICgqKgogICAqIFtqcy1zaGEyNTZde0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9lbW4xNzgvanMtc2hhMjU2fQogICAqCiAgICogQHZlcnNpb24gMC4xMS4wCiAgICogQGF1dGhvciBDaGVuLCBZaS1DeXVhbiBbZW1uMTc4QGdtYWlsLmNvbV0KICAgKiBAY29weXJpZ2h0IENoZW4sIFlpLUN5dWFuIDIwMTQtMjAyNAogICAqIEBsaWNlbnNlIE1JVAogICAqKQoqLwovLyMgc291cmNlTWFwcGluZ1VSTD13b3JrZXIuanMubWFw"), "");
              mTheCode = mTheCode.replaceAll('"bpb.yousef.isegaro.com"', 'atob("YnBiLnlvdXNlZi5pc2VnYXJvLmNvbQ==")');
+             mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/BPB-Worker-Panel', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlL0JQQi1Xb3JrZXItUGFuZWw=")}');
+             mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlLw==")}');
+             mTheCode = mTheCode.replaceAll('BPB Panel ', '${atob("QlBCIFBhbmVsIA==")}');
+             mTheCode = mTheCode.replaceAll('>BPB ', '>${atob("QlBCIA==")}');
+             mTheCode = mTheCode.replaceAll('"BPB-', '"');
+             mTheCode = mTheCode.replaceAll('BPB F - ', 'Fragment - ');
+             mTheCode = mTheCode.replaceAll('BPB - Best Ping', 'Best Ping');
+             mTheCode = mTheCode.replaceAll('https://raw.githubusercontent.com/bia-pain-bache', '>${atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JpYS1wYWluLWJhY2hl")}');
+
 
          	 return mTheCode;
         }
