@@ -85,7 +85,7 @@
                 border-color: var(--primary-color);
                 border: 1px solid;
                 margin-top: 10px;
-    			width: 98%;
+                width: 100%;
             }
             #apply {display: block; margin-top: 20px;}
             input.button {font-weight: 600; font-size: 1.1rem;}
@@ -267,6 +267,13 @@
                     justify-content: flex-end;
                     font-family: Arial, sans-serif;
                 }
+                .button-container {
+                    width: 100%;
+                    display: inline-flex;
+                    justify-content: center;
+                }
+                .button-container button{margin-left: 10px;}
+                .form-control button{width: 98% }
                 #apply { display: block; margin: 20px auto 0 auto; max-width: 50%; }
                 .modal-content { width: 30% }
                 .routing { display: grid; grid-template-columns: 4fr 1fr 3fr 4fr; }
@@ -276,27 +283,24 @@
 
             .note, .form-control.rtl  {display: block;color:#F80;}
             .errorBox, .form-control.errorBox {
-            	display: none;
-            	color: #F00 !important;
-            	font-size: large;
-    			text-align: center;
-    		}
+                display: none;
+                color: #F00 !important;
+                font-size: large;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
-        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.4</h1>
+        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.5</h1>
         <div class="form-container">
             <h2>کد اصلي پروژه را اینجا وارد کنيد:</h2>
-            <div id="errorVersion" class=" form-control rtl errorBox" style="display: none;">
-                  👈 توجه اين نسخه از پروژه پشتيباني نميشود و کدگزاري مجدد درست عمل نخواهد کرد ! 👉
-            </div>
             <div class="table-container">
                 <textarea id="maincode" onchange="CheckBPBVrsion()"></textarea>
             </div>
 
 
             <div class="form-control rtl note">
-				* توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
+                * توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
                 <br>
 #                دریافت کد های پروژه:
                     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel" target="_blank">BPB-Worker-Panel</a>
@@ -306,13 +310,13 @@
                 <a href="https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js" title="BPB 2.8.1" target="_blank">BPB 2.8.1</a>
                 -
                 <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v3/unobfuscated-worker.js" title="BPB 3.0.0" target="_blank">BPB 3.0.0</a>
-			    -
+                -
                 <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases" title="BPB 3.0.0" target="_blank">BPB Releases</a>
-			    <center>
-			</div>
+                <center>
+            </div>
             <div class="form-control">
-            	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js')">AutoLoad BPB 2.8.1</button>
-            	<button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/main/unobfuscated/worker.js')">AutoLoad BPB Latest</button>
+                <button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js')">AutoLoad BPB 2.8.1</button>
+                <button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/main/unobfuscated/worker.js')">AutoLoad BPB Latest</button>
 
 
             </div>
@@ -320,11 +324,11 @@
         <div class="form-container">
 
             <div class="form-control rtl">
-* 			کلماتي که انتخاب ميکنيد نبايد تکراري باشد وگرنه سيستم دچار مشکل ميشود.
+*           کلماتي که انتخاب ميکنيد نبايد تکراري باشد وگرنه سيستم دچار مشکل ميشود.
             </div>
-		<hr />
+        <hr />
             <form id="configForm">
-            	<!--- ////////////////////////////  URL  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                <!--- ////////////////////////////  URL  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                 <details open>
 
 
@@ -349,19 +353,19 @@
                     </div>
                 </details>
                 <!--- ////////////////////////////  Variables  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-                <details>
+                <details id="home-box">
                     <summary><h2>صفحه اصلي</h2></summary>
                     <div class="form-control">
                         <label for="homePage">www.speedtest.net (Home page)</label>
                         <input type="text" id="homePage" name="homePage" value="" placeholder="speed.cloudflare.com" pattern="[a-z0-9.]{3,}$" list="hostsample" title="سايتي که بجاي صفحه اصلي نمايش داده ميشود">
-                    	<datalist id='hostsample'>
-                    	<option value='www.speedtest.net'>
-                    	<option value='speed.cloudflare.com'>
-                    	<option value='speedtest.gcore.com'>
-                    	<option value='natesmith.design'>
-                    	<option value='postevand.com'>
-                    	<option value='tronbank.site'>
-                    	</datalist>
+                        <datalist id='hostsample'>
+                        <option value='www.speedtest.net'>
+                        <option value='speed.cloudflare.com'>
+                        <option value='speedtest.gcore.com'>
+                        <option value='natesmith.design'>
+                        <option value='postevand.com'>
+                        <option value='tronbank.site'>
+                        </datalist>
 
                     </div>
                     <div class="form-control rtl">
@@ -604,9 +608,9 @@
         </div>
         <div class="form-container">
                 <div id="apply" class="form-control">
-                    <div style="grid-column: 2; width: 100%; display: inline-flex;">
-                        <input type="submit" id="applyButton" style="margin-right: 10px;" class="button" value="Generate New BPB 🌊" form="configForm" onclick="">
-                        <button id="applyCopyButton" type="button" style="margin-right: 10px;" class="button" onclick="CopyNewCode('gencode')" disabled>Copy</button>
+                    <div class="button-container">
+                        <input type="submit" id="applyButton" class="button" value="Generate New BPB 🌊" form="configForm" onclick="">
+                        <button id="applyCopyButton" type="button" class="button" onclick="CopyNewCode('gencode')" disabled>Copy</button>
                         <button id="applyDnldButton" type="button" class="button" onclick="SendFile('gencode')" disabled>Download</button>
                     </div>
                 </div>
@@ -621,10 +625,11 @@
 
 
             <div id="apply" class="form-control">
-                    <div style="grid-column: 2; width: 100%; display: inline-flex;">
-                        <input type="submit" id="obfButton" style="margin-right: 10px;" class="button" value="Obfuscator Code 💨" onclick="ObfuscationNewCode()" disabled>
-                        <button id="obfCopyButton" type="button" style="margin-right: 10px;" class="button" onclick="CopyNewCode('obfcode')" disabled>Copy</button>
-                        <button id="obfDnldButton" type="button" class="button" onclick="SendFile('obfcode')" disabled>Download</button>
+                    <div class="button-container">
+                        <input type="submit" id="obfButton" class="button" value="Obfuscator Code 💨" onclick="ObfuscationNewCode()" disabled>
+                        <button id="obfCopyButton" type="button" class="button" onclick="CopyNewCode('obfcode')" disabled>Copy</button>
+                        <button id="obfDnldButton" type="button" class="button" onclick="SendFile('obfcode')" disabled>Save</button>
+                        <button id="obfDnldZipButton" type="button" class="button" onclick="SendZipFile('obfcode')" disabled>Save ZIP</button>
 
                     </div>
              </div>
@@ -650,8 +655,8 @@
                  &nbsp;&nbsp; - &nbsp;&nbsp;
 
                 <a class="link" href="https://github.com/liMilCo/BPB-ReCoder" style="color: var(--color);" target="_blank">
-                	<i class="fa fa-github" style="font-size:36px; margin-right: 10px;vertical-align:middle;"></i>
-                	ReCoder</a>
+                    <i class="fa fa-github" style="font-size:36px; margin-right: 10px;vertical-align:middle;"></i>
+                    ReCoder</a>
 
             </div>
         </div>
@@ -659,6 +664,7 @@
             <i id="modeIcon" class="fa fa-2x fa-adjust" style="color: var(--background-color);" aria-hidden="true"></i>
         </button>
     <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+    <script type="text/javascript" src="https://stuk.github.io/jszip/dist/jszip.js"></script>
     <script>
         localStorage.getItem('darkMode') === 'enabled' && document.body.classList.add('dark-mode');
         let inputsSave = ["panel","login","secrets","homePage","envbpb","envuuid","envtrojanpass","envproxyip"];
@@ -677,6 +683,7 @@
         const obfCode  = document.getElementById('obfcode');
         const obfCopyButton  = document.getElementById('obfCopyButton');
         const obfDnldButton  = document.getElementById('obfDnldButton');
+        const obfDnldZipButton  = document.getElementById('obfDnldZipButton');
         const HomePage  = document.getElementById('homePage');
 
         document.addEventListener('DOMContentLoaded', async () => {
@@ -687,11 +694,11 @@
                 localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
             });
             for (const inputSave of inputsSave) {
-            	     const inputSaveEl = document.getElementById(inputSave);
-            	     inputSaveEl.value = localStorage.getItem(inputSave);
+                     const inputSaveEl = document.getElementById(inputSave);
+                     inputSaveEl.value = localStorage.getItem(inputSave);
             }
             HomePage.value = localStorage.getItem('homePage');
-
+            if(HomePage.value){document.getElementById('home-box').open = true;}
 
         });
        configForm.addEventListener('submit', (event) => applySettings());
@@ -716,25 +723,25 @@
                 if(!TheCode){alert("Please insert BPB Original Code.");SrcCode.focus();return false;}
                 if(IsDuplicates(inputsData) != ''){alert("The word ["+IsDuplicates(inputsData)+"] used more than once!");return false;}
 
-        	    for (const inData of inputsData) {
-        	        const SrchData  = document.getElementById('_'+inData.id);
-        	        var SrchPrfx;
-        	        if(SrchData.value.startsWith("env.")){SrchPrfx = "env."}else if(SrchData.value.startsWith("/")){SrchPrfx = "/"}else{SrchPrfx = ""}
-        	    	//alert(SrchData.value +" = "+ inData.value +" - "+inData.id+" + "+SrchPrfx);
-        	    	if(inData.value){
-	        	    	TheCode = TheCode.replaceAll(SrchData.value, SrchPrfx + inData.value);
-        	    	}
+                for (const inData of inputsData) {
+                    const SrchData  = document.getElementById('_'+inData.id);
+                    var SrchPrfx;
+                    if(SrchData.value.startsWith("env.")){SrchPrfx = "env."}else if(SrchData.value.startsWith("/")){SrchPrfx = "/"}else{SrchPrfx = ""}
+                    //alert(SrchData.value +" = "+ inData.value +" - "+inData.id+" + "+SrchPrfx);
+                    if(inData.value){
+                        TheCode = TheCode.replaceAll(SrchData.value, SrchPrfx + inData.value);
+                    }
                     if(inputsSave.includes(inData.id)){localStorage.setItem(inData.id, inData.value);}
-        	    }
+                }
 
 
                 if(HomePage.value){
-                	if(TheCode.search("fallbackDomain = ") > 1){
+                    if(TheCode.search("fallbackDomain = ") > 1){
                       TheCode = TheCode.replaceAll('fallbackDomain = env.FALLBACK || "', 'fallbackDomain = env.FALLBACK || "'+HomePage.value+'"; //"');
-                	}else{
-                	  TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
-                	}
-                	localStorage.setItem('homePage', HomePage.value);
+                    }else{
+                      TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
+                    }
+                    localStorage.setItem('homePage', HomePage.value);
                 }
                 //remove Bundled license information
 
@@ -750,39 +757,39 @@
         }
 
         const AdvChng  = (mTheCode) => {
-		//// LICENSE (UnObfuscatable) ///////
-        	 mTheCode = mTheCode.replaceAll(atob("LyohIEJ1bmRsZWQgbGljZW5zZSBpbmZvcm1hdGlvbjoKCmpzLXNoYTI1Ni9zcmMvc2hhMjU2LmpzOgogICgqKgogICAqIFtqcy1zaGEyNTZde0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9lbW4xNzgvanMtc2hhMjU2fQogICAqCiAgICogQHZlcnNpb24gMC4xMS4wCiAgICogQGF1dGhvciBDaGVuLCBZaS1DeXVhbiBbZW1uMTc4QGdtYWlsLmNvbV0KICAgKiBAY29weXJpZ2h0IENoZW4sIFlpLUN5dWFuIDIwMTQtMjAyNAogICAqIEBsaWNlbnNlIE1JVAogICAqKQoqLwovLyMgc291cmNlTWFwcGluZ1VSTD13b3JrZXIuanMubWFw"), "");
+        //// LICENSE (UnObfuscatable) ///////
+             mTheCode = mTheCode.replaceAll(atob("LyohIEJ1bmRsZWQgbGljZW5zZSBpbmZvcm1hdGlvbjoKCmpzLXNoYTI1Ni9zcmMvc2hhMjU2LmpzOgogICgqKgogICAqIFtqcy1zaGEyNTZde0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9lbW4xNzgvanMtc2hhMjU2fQogICAqCiAgICogQHZlcnNpb24gMC4xMS4wCiAgICogQGF1dGhvciBDaGVuLCBZaS1DeXVhbiBbZW1uMTc4QGdtYWlsLmNvbV0KICAgKiBAY29weXJpZ2h0IENoZW4sIFlpLUN5dWFuIDIwMTQtMjAyNAogICAqIEBsaWNlbnNlIE1JVAogICAqKQoqLwovLyMgc291cmNlTWFwcGluZ1VSTD13b3JrZXIuanMubWFw"), "");
              
-		////// 3.0.4 //////
-		mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/${atob("QlBC")}-Worker-Panel', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlL0JQQi1Xb3JrZXItUGFuZWw=")}');
-		mTheCode = mTheCode.replaceAll('${atob("QlBC")} Panel ', '${atob("QlBCIFBhbmVsIA==")}');
-		//mTheCode = mTheCode.replaceAll('`${atob("QlBC")}-', '`');
-		mTheCode = mTheCode.replaceAll('${atob("QlBC")} F - ', 'Fragment - ');
-		mTheCode = mTheCode.replaceAll('${atob("QlBC")} - Best Ping', 'Best Ping');
-		
-		////// 3.0.0 //////		
-		mTheCode = mTheCode.replaceAll('"bpb.yousef.isegaro.com"', 'atob("YnBiLnlvdXNlZi5pc2VnYXJvLmNvbQ==")');
-		mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/BPB-Worker-Panel', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlL0JQQi1Xb3JrZXItUGFuZWw=")}');
-		mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlLw==")}');
-		mTheCode = mTheCode.replaceAll('BPB Panel ', '${atob("QlBCIFBhbmVsIA==")}');
-		mTheCode = mTheCode.replaceAll('>BPB ', '>${atob("QlBCIA==")}');
-		mTheCode = mTheCode.replaceAll('"BPB-', '"');
-		mTheCode = mTheCode.replaceAll('BPB F - ', 'Fragment - ');
-		mTheCode = mTheCode.replaceAll('BPB - Best Ping', 'Best Ping');
-		mTheCode = mTheCode.replaceAll('https://raw.githubusercontent.com/bia-pain-bache', '${atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JpYS1wYWluLWJhY2hl")}');
+        ////// 3.0.4 //////
+        mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/${atob("QlBC")}-Worker-Panel', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlL0JQQi1Xb3JrZXItUGFuZWw=")}');
+        mTheCode = mTheCode.replaceAll('${atob("QlBC")} Panel ', '${atob("QlBCIFBhbmVsIA==")}');
+        //mTheCode = mTheCode.replaceAll('`${atob("QlBC")}-', '`');
+        mTheCode = mTheCode.replaceAll('${atob("QlBC")} F - ', 'Fragment - ');
+        mTheCode = mTheCode.replaceAll('${atob("QlBC")} - Best Ping', 'Best Ping');
+        
+        ////// 3.0.0 //////     
+        mTheCode = mTheCode.replaceAll('"bpb.yousef.isegaro.com"', 'atob("YnBiLnlvdXNlZi5pc2VnYXJvLmNvbQ==")');
+        mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/BPB-Worker-Panel', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlL0JQQi1Xb3JrZXItUGFuZWw=")}');
+        mTheCode = mTheCode.replaceAll('https://github.com/bia-pain-bache/', '${atob("aHR0cHM6Ly9naXRodWIuY29tL2JpYS1wYWluLWJhY2hlLw==")}');
+        mTheCode = mTheCode.replaceAll('BPB Panel ', '${atob("QlBCIFBhbmVsIA==")}');
+        mTheCode = mTheCode.replaceAll('>BPB ', '>${atob("QlBCIA==")}');
+        mTheCode = mTheCode.replaceAll('"BPB-', '"');
+        mTheCode = mTheCode.replaceAll('BPB F - ', 'Fragment - ');
+        mTheCode = mTheCode.replaceAll('BPB - Best Ping', 'Best Ping');
+        mTheCode = mTheCode.replaceAll('https://raw.githubusercontent.com/bia-pain-bache', '${atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JpYS1wYWluLWJhY2hl")}');
 
 
-         	 return mTheCode;
+             return mTheCode;
         }
 
         var splitStringsObf = false;
 
         const renGlobObf  = () => {
-        	 if(document.getElementById('renameObf').checked){
-        	 	     splitStringsObf = true;
-        	 }else{
-        	 	     splitStringsObf = false;
-        	 }
+             if(document.getElementById('renameObf').checked){
+                     splitStringsObf = true;
+             }else{
+                     splitStringsObf = false;
+             }
         }
 
         const ObfuscationNewCode = async () => {
@@ -797,69 +804,70 @@
                 //var JavaScriptObfuscator = require('javascript-obfuscator');
                 var obfuscationResult = await JavaScriptObfuscator.obfuscate(TheCode,
                     {
-    					"compact": true,
-    					"config": "",
-    					"controlFlowFlattening": false,
-    					"controlFlowFlatteningThreshold": 0.75,
-    					"debugProtection": false,
-    					"debugProtectionInterval": 0,
-    					"disableConsoleOutput": false,
-    					"domainLock": [],
-    					"domainLockRedirectUrl": "about:blank",
-    					"exclude": [],
-    					"forceTransformStrings": [],
-    					"identifierNamesCache": null,
-    					"identifierNamesGenerator": "hexadecimal",
-    					"identifiersPrefix": "",
-    					"identifiersDictionary": [],
-    					"ignoreImports": false,
-    					"inputFileName": "",
-    					"log": false,
-    					"numbersToExpressions": false,
-    					"optionsPreset": "default",
-    					"renameProperties": false,
-    					"renamePropertiesMode": "safe",
-    					"reservedNames": [],
-    					"reservedStrings": [],
-    					"stringArrayRotate": true,
-    					"seed": 0,
-    					"selfDefending": false,
-    					"stringArrayShuffle": true,
-    					"simplify": true,
-    					"sourceMap": false,
-    					"sourceMapBaseUrl": "",
-    					"sourceMapFileName": "",
-    					"sourceMapMode": "separate",
-    					"sourceMapSourcesMode": "sources-content",
-    					"stringArray": true,
-    					"stringArrayCallsTransform": false,
-    					"stringArrayCallsTransformThreshold": 0.5,
-    					"stringArrayEncoding": [
-    					    					"none"
-    					],
-    					"stringArrayIndexesType": [
-    					    					"hexadecimal-number"
-    					],
-    					"stringArrayIndexShift": true,
-    					"stringArrayWrappersChainedCalls": true,
-    					"stringArrayWrappersCount": 1,
-    					"stringArrayWrappersParametersMaxCount": 2,
-    					"stringArrayWrappersType": "variable",
-    					"stringArrayThreshold": 0.75,
-    					"unicodeEscapeSequence": false,
-    					"deadCodeInjection": false,
-    					"deadCodeInjectionThreshold": 0.4,
-    					"renameGlobals": false,
-    					"splitStrings": splitStringsObf,
-    					"splitStringsChunkLength": 2,
-    					"transformObjectKeys": false,
-    					"target": "node"
+                        "compact": true,
+                        "config": "",
+                        "controlFlowFlattening": false,
+                        "controlFlowFlatteningThreshold": 0.75,
+                        "debugProtection": false,
+                        "debugProtectionInterval": 0,
+                        "disableConsoleOutput": false,
+                        "domainLock": [],
+                        "domainLockRedirectUrl": "about:blank",
+                        "exclude": [],
+                        "forceTransformStrings": [],
+                        "identifierNamesCache": null,
+                        "identifierNamesGenerator": "hexadecimal",
+                        "identifiersPrefix": "",
+                        "identifiersDictionary": [],
+                        "ignoreImports": false,
+                        "inputFileName": "",
+                        "log": false,
+                        "numbersToExpressions": false,
+                        "optionsPreset": "default",
+                        "renameProperties": false,
+                        "renamePropertiesMode": "safe",
+                        "reservedNames": [],
+                        "reservedStrings": [],
+                        "stringArrayRotate": true,
+                        "seed": 0,
+                        "selfDefending": false,
+                        "stringArrayShuffle": true,
+                        "simplify": true,
+                        "sourceMap": false,
+                        "sourceMapBaseUrl": "",
+                        "sourceMapFileName": "",
+                        "sourceMapMode": "separate",
+                        "sourceMapSourcesMode": "sources-content",
+                        "stringArray": true,
+                        "stringArrayCallsTransform": false,
+                        "stringArrayCallsTransformThreshold": 0.5,
+                        "stringArrayEncoding": [
+                                                "none"
+                        ],
+                        "stringArrayIndexesType": [
+                                                "hexadecimal-number"
+                        ],
+                        "stringArrayIndexShift": true,
+                        "stringArrayWrappersChainedCalls": true,
+                        "stringArrayWrappersCount": 1,
+                        "stringArrayWrappersParametersMaxCount": 2,
+                        "stringArrayWrappersType": "variable",
+                        "stringArrayThreshold": 0.75,
+                        "unicodeEscapeSequence": false,
+                        "deadCodeInjection": false,
+                        "deadCodeInjectionThreshold": 0.4,
+                        "renameGlobals": false,
+                        "splitStrings": splitStringsObf,
+                        "splitStringsChunkLength": 2,
+                        "transformObjectKeys": false,
+                        "target": "node"
                     }
                 );
 
 
                 obfCopyButton.disabled = false;
                 obfDnldButton.disabled = false;
+                obfDnldZipButton.disabled = false;
                 obfCode.value =  obfuscationResult.getObfuscatedCode();
 
                 document.body.style.cursor = 'default';
@@ -870,13 +878,13 @@
 
 
         const CopyNewCode = (id) => {
-        	 const CopyNewCodeEl  = document.getElementById(id);
-        	 if(CopyNewCodeEl.value){copyToClipboard(CopyNewCodeEl.value);}
+             const CopyNewCodeEl  = document.getElementById(id);
+             if(CopyNewCodeEl.value){copyToClipboard(CopyNewCodeEl.value);}
         }
 
         const setRandom = (id) => {
-        	 const setRandomEl = document.getElementById(id);
-        	 if(!setRandomEl.value){setRandomEl.value = generateRandom();}
+             const setRandomEl = document.getElementById(id);
+             if(!setRandomEl.value){setRandomEl.value = generateRandom();}
         }
 
              function generateRandom() {
@@ -891,20 +899,39 @@
                 }
                 return password;
             }
- 		let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
+        let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
         const IsDuplicates = (obj) => {
-        	 var arr = [];
-        	 var i = 0;
-        	 for (const inObj of obj) { if(inObj.value){arr[i] = inObj.value; i++;}}
+             var arr = [];
+             var i = 0;
+             for (const inObj of obj) { if(inObj.value){arr[i] = inObj.value; i++;}}
              return findDuplicates(arr);
         }
         const SendFile = (id) => {
-        	 const MyCode  = document.getElementById(id);
-        	 if(MyCode.value){downloadCode("_worker.js",MyCode.value);}
+             const MyCode  = document.getElementById(id);
+             if(MyCode.value){downloadCode("_worker.js",MyCode.value);}
         }
-function downloadCode(filename, text) {
+        var zip = new JSZip();
+        const SendZipFile = (id) => {
+             const MyZipCode  = document.getElementById(id);
+             if(MyZipCode.value){
+             var zip = new JSZip();
+                zip.file("_worker.js", MyZipCode.value);//
+                zip.generateAsync({type:"base64"})
+                    .then(function(content) {
+                    downloadCode("worker.zip", content, true);
+                });
+
+             }            
+        }       
+function downloadCode(filename, text, IsData) {
   var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  if(IsData){
+    var elementEncoding = 'data:application/zip;base64,';
+  }else{
+    var elementEncoding = 'data:text/plain;charset=utf-8,';
+    text = encodeURIComponent(text);
+  }
+  element.setAttribute('href', elementEncoding + text);
   element.setAttribute('download', filename);
 
   element.style.display = 'none';
@@ -916,56 +943,56 @@ function downloadCode(filename, text) {
 }
 
 function GetBPBVrsion(InInt) {
-	var BPBVersion = 0;
+    var BPBVersion = 0;
          if(SrcCode.value){
          var versionMatch = SrcCode.value.match(/panelVersion\s*=\s*[\"\'](.*?)[\"\']/);
-         	if (versionMatch && versionMatch[1]) {
-         	     BPBVersion = versionMatch[1];
-         	}
+            if (versionMatch && versionMatch[1]) {
+                 BPBVersion = versionMatch[1];
+            }
          }
          if(InInt){
             BPBVersion = versionMatch[1].split(".")[0]+"."+versionMatch[1].split(".")[1]+versionMatch[1].split(".")[2];
-         	BPBVersion = parseFloat(BPBVersion);
+            BPBVersion = parseFloat(BPBVersion);
          }
          return BPBVersion;
 }
 
 function CheckBPBVrsion(){
-	var BPBVersion = GetBPBVrsion();
+    var BPBVersion = GetBPBVrsion();
 
         if(SrcCode.value.search("env.kv") > 1){
-    			document.getElementById('_envbpb').value = 'env.kv';
-    	}else{
-    			document.getElementById('_envbpb').value = 'env.bpb';
-    	}
+                document.getElementById('_envbpb').value = 'env.kv';
+        }else{
+                document.getElementById('_envbpb').value = 'env.bpb';
+        }
         if(SrcCode.value.search("env.TR_PASS") > 1){
-    			document.getElementById('_envtrojanpass').value = 'env.TR_PASS';
-    	}else{
-    			document.getElementById('_envtrojanpass').value = 'env.TROJAN_PASS';
-    	}
+                document.getElementById('_envtrojanpass').value = 'env.TR_PASS';
+        }else{
+                document.getElementById('_envtrojanpass').value = 'env.TROJAN_PASS';
+        }
         var NewWordVer = {
-        		"vlessOverWSHandler":"VLOverWSHandler",
-        		"trojanOverWSHandler":"TROverWSHandler",
-        		"processVlessHeader":"processVLHeader",
-        		"vlessRemoteSocketToWS":"VLRemoteSocketToWS",
-        		"parseTrojanHeader":"parseTRHeader",
-        		"trojanRemoteSocketToWS":"TRRemoteSocketToWS",
-        		"buildXrayVLESSOutbound":"buildXrayVLOutbound",
-        		"buildXrayTrojanOutbound":"buildXrayTROutbound",
-        		"buildSingBoxVLESSOutbound":"buildSingBoxVLOutbound",
-        		"buildSingBoxTrojanOutbound":"buildSingBoxTROutbound",
-        		"buildClashVLESSOutbound":"buildClashVLOutbound",
-        		"buildClashTrojanOutbound":"buildClashTROutbound"
+                "vlessOverWSHandler":"VLOverWSHandler",
+                "trojanOverWSHandler":"TROverWSHandler",
+                "processVlessHeader":"processVLHeader",
+                "vlessRemoteSocketToWS":"VLRemoteSocketToWS",
+                "parseTrojanHeader":"parseTRHeader",
+                "trojanRemoteSocketToWS":"TRRemoteSocketToWS",
+                "buildXrayVLESSOutbound":"buildXrayVLOutbound",
+                "buildXrayTrojanOutbound":"buildXrayTROutbound",
+                "buildSingBoxVLESSOutbound":"buildSingBoxVLOutbound",
+                "buildSingBoxTrojanOutbound":"buildSingBoxTROutbound",
+                "buildClashVLESSOutbound":"buildClashVLOutbound",
+                "buildClashTrojanOutbound":"buildClashTROutbound"
 
-        	};
+            };
         for (var OldWord in NewWordVer) {
-    		if(SrcCode.value.search(NewWordVer[OldWord]) > 1){
-    			document.getElementById("_"+OldWord).value = NewWordVer[OldWord];
-    		}else{
-    			document.getElementById("_"+OldWord).value = OldWord;
-    		}
-	}
-  	alert("✔️ BPB v"+BPBVersion+" Loaded.");
+            if(SrcCode.value.search(NewWordVer[OldWord]) > 1){
+                document.getElementById("_"+OldWord).value = NewWordVer[OldWord];
+            }else{
+                document.getElementById("_"+OldWord).value = OldWord;
+            }
+    }
+    alert("✔️ BPB v"+BPBVersion+" Loaded.");
 }
 
 function GetBPBCode(theUrl){
@@ -979,8 +1006,8 @@ function GetBPBCode(theUrl){
 
 function SetBPBCode(BPBCodeLink){
        if(!BPBCodeLink){return false;}
-  	   var  BPBCode = GetBPBCode(BPBCodeLink);
-  	   SrcCode.value = BPBCode;
+       var  BPBCode = GetBPBCode(BPBCodeLink);
+       SrcCode.value = BPBCode;
        CheckBPBVrsion();
 }
     </script>
