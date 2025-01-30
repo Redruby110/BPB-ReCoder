@@ -1,7 +1,11 @@
 <h1 align="center">😎 Customize  
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel">BPB Panel 💦</a> 
 </h1>
-<h2 align="center">Solving Error 1011</h2>
+<h2 align="center">Solving Error 1011 </h2>
+
+[**فارسی**](https://liMilCo.github.io/BPB-ReCoder)
+
+---
 
 😎 Using [this project](https://github.com/liMilCo/BPB-ReCoder): https://liMilCo.github.io/BPB-ReCoder  
 <p align="left">
