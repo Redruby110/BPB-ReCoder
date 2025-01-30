@@ -290,7 +290,7 @@
         </style>
     </head>
     <body>
-        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.5</h1>
+        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.6</h1>
         <div class="form-container">
             <h2>کد اصلي پروژه را اینجا وارد کنيد:</h2>
             <div class="table-container">
@@ -334,7 +334,7 @@
                     <summary><h2>آدرس هاي دسترسي به پنل</h2></summary>
                     <div class="form-control">
                         <label for="panel">/panel</label>
-                        <input type="text" id="panel" name="bpbdata" value="" placeholder="administrator" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="panel" name="bpbdataURL" value="" placeholder="administrator" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
                         <input type="hidden" id="_panel" value="/panel">
                     </div>
                     <div class="form-control rtl">
@@ -342,12 +342,12 @@
                     </div>
                     <div class="form-control">
                         <label for="login">/login</label>
-                        <input type="text" id="login" name="bpbdata" data="/login" value="" placeholder="signin" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="login" name="bpbdataURL" data="/login" value="" placeholder="signin" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
                         <input type="hidden" id="_login" value="/login">
                     </div>
                     <div class="form-control">
                         <label for="secrets">/secrets</label>
-                        <input type="text" id="secrets" name="bpbdata" value="" placeholder="autogen" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="secrets" name="bpbdataURL" value="" placeholder="autogen" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
                         <input type="hidden" id="_secrets" value="/secrets">
                     </div>
                 </details>
@@ -379,7 +379,7 @@
                     <summary><h2>متغير هاي کلودفلر (Variables and Secrets)</h2></summary>
                     <div class="form-control">
                         <label for="envbpb">bpb  --> (KV)</label>
-                        <input type="text" id="envbpb" name="bpbdata" value="" placeholder="data" pattern="[a-z]{2,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="envbpb" name="bpbdataVAR" value="" placeholder="data" pattern="[a-z]{2,}$" title="فقط حروف کوچک انگليسي" required>
                         <input type="hidden" id="_envbpb" value="env.bpb">
                     </div>
                     <div class="form-control rtl">
@@ -388,17 +388,17 @@
                     <hr >
                     <div class="form-control">
                         <label for="envuuid">UUID</label>
-                        <input type="text" id="envuuid" name="bpbdata" value="" placeholder="Key" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
+                        <input type="text" id="envuuid" name="bpbdataVAR" value="" placeholder="Key" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
                         <input type="hidden" id="_envuuid" value="env.UUID">
                     </div>
                     <div class="form-control">
                         <label for="envtrojanpass">TROJAN_PASS</label>
-                        <input type="text" id="envtrojanpass" name="bpbdata" value="" placeholder="MyPass" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
+                        <input type="text" id="envtrojanpass" name="bpbdataVAR" value="" placeholder="MyPass" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
                         <input type="hidden" id="_envtrojanpass" value="env.TROJAN_PASS">
                     </div>
                     <div class="form-control">
                         <label for="envproxyip">PROXYIP</label>
-                        <input type="text" id="envproxyip" name="bpbdata" value="" placeholder="PxIP" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
+                        <input type="text" id="envproxyip" name="bpbdataVAR" value="" placeholder="PxIP" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
                         <input type="hidden" id="_envproxyip" value="env.PROXYIP">
                     </div>
                     <div class="form-control rtl">
@@ -408,198 +408,207 @@
                 <!--- ////////////////////////////  Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                 <details open>
                     <summary><h2>توابع اصلي</h2></summary>
+
+                    
+                     <div class="form-control">
+                        <button type="button" class="button" id="ClearAllFUN1" onclick="allClear('FUN1')">Clear All 💧</button>
+                        <button type="button" class="button" id="RandAllFUN1" onclick="allRandom('FUN1')">Random All 🎁</button>
+                    </div>                   
                     <div class="form-control">
                         <label for="vlessOverWSHandler">vlessOverWSHandler() <a title="Generate Random Functions Name" class="random" onclick="setRandom('vlessOverWSHandler')">🎁</a></label>
-                        <input type="text" id="vlessOverWSHandler" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="vlessOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_vlessOverWSHandler" value="vlessOverWSHandler">
                     </div>
                     <div class="form-control">
                         <label for="trojanOverWSHandler">trojanOverWSHandler() <a title="Generate Random Functions Name" class="random" onclick="setRandom('trojanOverWSHandler')">🎁</a></label>
-                        <input type="text" id="trojanOverWSHandler" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="trojanOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_trojanOverWSHandler" value="trojanOverWSHandler">
                     </div>
                     <div class="form-control">
                         <label for="handleTCPOutBound">handleTCPOutBound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('handleTCPOutBound')">🎁</a></label>
-                        <input type="text" id="handleTCPOutBound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="handleTCPOutBound" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_handleTCPOutBound" value="handleTCPOutBound">
                     </div>
                     <div class="form-control">
                         <label for="makeReadableWebSocketStream">makeReadableWebSocketStream() <a title="Generate Random Functions Name" class="random" onclick="setRandom('makeReadableWebSocketStream')">🎁</a></label>
-                        <input type="text" id="makeReadableWebSocketStream" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="makeReadableWebSocketStream" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_makeReadableWebSocketStream" value="makeReadableWebSocketStream">
                     </div>
                     <div class="form-control">
                         <label for="processVlessHeader">processVlessHeader() <a title="Generate Random Functions Name" class="random" onclick="setRandom('processVlessHeader')">🎁</a></label>
-                        <input type="text" id="processVlessHeader" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="processVlessHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_processVlessHeader" value="processVlessHeader">
                     </div>
                     <div class="form-control">
                         <label for="vlessRemoteSocketToWS">vlessRemoteSocketToWS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('vlessRemoteSocketToWS')">🎁</a></label>
-                        <input type="text" id="vlessRemoteSocketToWS" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="vlessRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_vlessRemoteSocketToWS" value="vlessRemoteSocketToWS">
                     </div>
                      <div class="form-control">
                         <label for="trojanRemoteSocketToWS">trojanRemoteSocketToWS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('trojanRemoteSocketToWS')">🎁</a></label>
-                        <input type="text" id="trojanRemoteSocketToWS" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="trojanRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_trojanRemoteSocketToWS" value="trojanRemoteSocketToWS">
                     </div>
                     <div class="form-control">
                         <label for="parseTrojanHeader">parseTrojanHeader() <a title="Generate Random Functions Name" class="random" onclick="setRandom('parseTrojanHeader')">🎁</a></label>
-                        <input type="text" id="parseTrojanHeader" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="parseTrojanHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
                         <input type="hidden" id="_parseTrojanHeader" value="parseTrojanHeader">
                     </div>
                  </details>
                 <!--- ////////////////////////////  Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                 <details>
                     <summary><h2>توابع فرعی (حالت پیشرفته)</h2></summary>
-
+                     <div class="form-control">
+                        <button type="button" class="button" id="ClearAllFUN2" onclick="allClear('FUN2')">Clear All 💧</button>
+                        <button type="button" class="button" id="RandAllFUN2" onclick="allRandom('FUN2')">Random All 🎁</button>
+                    </div>   
                     <div class="form-control">
                         <label for="buildXrayRoutingRules">buildXrayRoutingRules() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayRoutingRules')">🎁</a></label>
-                        <input type="text" id="buildXrayRoutingRules" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayRoutingRules" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayRoutingRules" value="buildXrayRoutingRules">
                     </div>
                     <div class="form-control">
                         <label for="buildXrayVLESSOutbound">buildXrayVLESSOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayVLESSOutbound')">🎁</a></label>
-                        <input type="text" id="buildXrayVLESSOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayVLESSOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayVLESSOutbound" value="buildXrayVLESSOutbound">
                     </div>
                     <div class="form-control">
                         <label for="SSS">buildXrayTrojanOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayTrojanOutbound')">🎁</a></label>
-                        <input type="text" id="buildXrayTrojanOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayTrojanOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayTrojanOutbound" value="buildXrayTrojanOutbound">
                     </div>
                     <div class="form-control">
                         <label for="buildXrayWarpOutbound">buildXrayWarpOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayWarpOutbound')">🎁</a></label>
-                        <input type="text" id="buildXrayWarpOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayWarpOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayWarpOutbound" value="buildXrayWarpOutbound">
                     </div>
                     <div class="form-control">
                         <label for="buildXrayChainOutbound">buildXrayChainOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayChainOutbound')">🎁</a></label>
-                        <input type="text" id="buildXrayChainOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayChainOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayChainOutbound" value="buildXrayChainOutbound">
                     </div>
                     <div class="form-control">
                         <label for="buildXrayConfig">buildXrayConfig() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayConfig')">🎁</a></label>
-                        <input type="text" id="buildXrayConfig" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayConfig" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayConfig" value="buildXrayConfig">
                     </div>
                     <div class="form-control">
                         <label for="buildXrayBestPingConfig">buildXrayBestPingConfig() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayBestPingConfig')">🎁</a></label>
-                        <input type="text" id="buildXrayBestPingConfig" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayBestPingConfig" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayBestPingConfig" value="buildXrayBestPingConfig">
                     </div>
                     <div class="form-control">
                         <label for="buildXrayBestFragmentConfig">buildXrayBestFragmentConfig() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayBestFragmentConfig')">🎁</a></label>
-                        <input type="text" id="buildXrayBestFragmentConfig" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildXrayBestFragmentConfig" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildXrayBestFragmentConfig" value="buildXrayBestFragmentConfig">
                     </div>
                     <div class="form-control">
                         <label for="getXrayCustomConfigs">getXrayCustomConfigs() <a title="Generate Random Functions Name" class="random" onclick="setRandom('getXrayCustomConfigs')">🎁</a></label>
-                        <input type="text" id="getXrayCustomConfigs" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="getXrayCustomConfigs" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_getXrayCustomConfigs" value="getXrayCustomConfigs">
                     </div>
 
                      <div class="form-control">
                         <label for="getXrayWarpConfigs">getXrayWarpConfigs() <a title="Generate Random Functions Name" class="random" onclick="setRandom('getXrayWarpConfigs')">🎁</a></label>
-                        <input type="text" id="getXrayWarpConfigs" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="getXrayWarpConfigs" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_getXrayWarpConfigs" value="getXrayWarpConfigs">
                     </div>
 
                      <div class="form-control">
                         <label for="buildSingBoxDNS">buildSingBoxDNS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxDNS')">🎁</a></label>
-                        <input type="text" id="buildSingBoxDNS" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildSingBoxDNS" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildSingBoxDNS" value="buildSingBoxDNS">
                     </div>
 
                      <div class="form-control">
                         <label for="buildSingBoxRoutingRules">buildSingBoxRoutingRules() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxRoutingRules')">🎁</a></label>
-                        <input type="text" id="buildSingBoxRoutingRules" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildSingBoxRoutingRules" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildSingBoxRoutingRules" value="buildSingBoxRoutingRules">
                     </div>
 
                      <div class="form-control">
                         <label for="buildSingBoxVLESSOutbound">buildSingBoxVLESSOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxVLESSOutbound')">🎁</a></label>
-                        <input type="text" id="buildSingBoxVLESSOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildSingBoxVLESSOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildSingBoxVLESSOutbound" value="buildSingBoxVLESSOutbound">
                     </div>
 
                      <div class="form-control">
                         <label for="buildSingBoxTrojanOutbound">buildSingBoxTrojanOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxTrojanOutbound')">🎁</a></label>
-                        <input type="text" id="buildSingBoxTrojanOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildSingBoxTrojanOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildSingBoxTrojanOutbound" value="buildSingBoxTrojanOutbound">
                     </div>
 
                      <div class="form-control">
                         <label for="buildSingBoxWarpOutbound">buildSingBoxWarpOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxWarpOutbound')">🎁</a></label>
-                        <input type="text" id="buildSingBoxWarpOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildSingBoxWarpOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildSingBoxWarpOutbound" value="buildSingBoxWarpOutbound">
                     </div>
 
                      <div class="form-control">
                         <label for="buildSingBoxChainOutbound">buildSingBoxChainOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxChainOutbound')">🎁</a></label>
-                        <input type="text" id="buildSingBoxChainOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildSingBoxChainOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildSingBoxChainOutbound" value="buildSingBoxChainOutbound">
                     </div>
 
                      <div class="form-control">
                         <label for="getSingBoxWarpConfig">getSingBoxWarpConfig() <a title="Generate Random Functions Name" class="random" onclick="setRandom('getSingBoxWarpConfig')">🎁</a></label>
-                        <input type="text" id="getSingBoxWarpConfig" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="getSingBoxWarpConfig" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_getSingBoxWarpConfig" value="getSingBoxWarpConfig">
                     </div>
                      <div class="form-control">
                         <label for="getSingBoxCustomConfig">getSingBoxCustomConfig() <a title="Generate Random Functions Name" class="random" onclick="setRandom('getSingBoxCustomConfig')">🎁</a></label>
-                        <input type="text" id="getSingBoxCustomConfig" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="getSingBoxCustomConfig" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_getSingBoxCustomConfig" value="getSingBoxCustomConfig">
                     </div>
                      <div class="form-control">
                         <label for="buildClashDNS">buildClashDNS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashDNS')">🎁</a></label>
-                        <input type="text" id="buildClashDNS" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildClashDNS" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildClashDNS" value="buildClashDNS">
                     </div>
                      <div class="form-control">
                         <label for="buildClashRoutingRules">buildClashRoutingRules() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashRoutingRules')">🎁</a></label>
-                        <input type="text" id="buildClashRoutingRules" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildClashRoutingRules" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildClashRoutingRules" value="buildClashRoutingRules">
                     </div>
                      <div class="form-control">
                         <label for="buildClashVLESSOutbound">buildClashVLESSOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashVLESSOutbound')">🎁</a></label>
-                        <input type="text" id="buildClashVLESSOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildClashVLESSOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildClashVLESSOutbound" value="buildClashVLESSOutbound">
                     </div>
                      <div class="form-control">
                         <label for="buildClashTrojanOutbound">buildClashTrojanOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashTrojanOutbound')">🎁</a></label>
-                        <input type="text" id="buildClashTrojanOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildClashTrojanOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildClashTrojanOutbound" value="buildClashTrojanOutbound">
                     </div>
                      <div class="form-control">
                         <label for="buildClashWarpOutbound">buildClashWarpOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashWarpOutbound')">🎁</a></label>
-                        <input type="text" id="buildClashWarpOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildClashWarpOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildClashWarpOutbound" value="buildClashWarpOutbound">
                     </div>
                      <div class="form-control">
                         <label for="buildClashChainOutbound">buildClashChainOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashChainOutbound')">🎁</a></label>
-                        <input type="text" id="buildClashChainOutbound" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="buildClashChainOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_buildClashChainOutbound" value="buildClashChainOutbound">
                     </div>
                      <div class="form-control">
                         <label for="getClashWarpConfig">getClashWarpConfig() <a title="Generate Random Functions Name" class="random" onclick="setRandom('getClashWarpConfig')">🎁</a></label>
-                        <input type="text" id="getClashWarpConfig" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="getClashWarpConfig" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_getClashWarpConfig" value="getClashWarpConfig">
                     </div>
                      <div class="form-control">
                         <label for="getClashNormalConfig">getClashNormalConfig() <a title="Generate Random Functions Name" class="random" onclick="setRandom('getClashNormalConfig')">🎁</a></label>
-                        <input type="text" id="getClashNormalConfig" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="getClashNormalConfig" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_getClashNormalConfig" value="getClashNormalConfig">
                     </div>
                      <div class="form-control">
                         <label for="getNormalConfigs">getNormalConfigs() <a title="Generate Random Functions Name" class="random" onclick="setRandom('getNormalConfigs')">🎁</a></label>
-                        <input type="text" id="getNormalConfigs" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="getNormalConfigs" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_getNormalConfigs" value="getNormalConfigs">
                     </div>
                     <!--
                      <div class="form-control">
                         <label for="SSS">SSS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('SSS')">🎁</a></label>
-                        <input type="text" id="SSS" name="bpbdata" value="" pattern="[a-zA-Z]{5,}$">
+                        <input type="text" id="SSS" name="bpbdataNNN" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_SSS" value="SSS">
                     </div>
                     -->
@@ -671,7 +680,13 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         const configForm = document.getElementById('configForm');
 
-        const inputsData = document.getElementsByName('bpbdata');
+        let inputsSubData = [];
+         inputsSubData['URL'] = document.getElementsByName('bpbdataURL');
+         inputsSubData['VAR'] = document.getElementsByName('bpbdataVAR');
+         inputsSubData['FUN1'] = document.getElementsByName('bpbdataFUN1');
+         inputsSubData['FUN2'] = document.getElementsByName('bpbdataFUN2');
+        const inputsData = [...inputsSubData.URL,...inputsSubData.VAR,...inputsSubData.FUN1,...inputsSubData.FUN2];
+
         const SrcCode  = document.getElementById('maincode');
         const GenCode  = document.getElementById('gencode');
         const obfButton  = document.getElementById('obfButton');
@@ -701,18 +716,7 @@
 
         });
        configForm.addEventListener('submit', (event) => applySettings());
-
-
-
-        const copyToClipboard = (text) => {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            alert('📋 New Codes Copied to clipboard');
-        }
+       
 
         const applySettings = async () => {
             event.preventDefault();
@@ -881,12 +885,9 @@
              if(CopyNewCodeEl.value){copyToClipboard(CopyNewCodeEl.value);}
         }
 
-        const setRandom = (id) => {
-             const setRandomEl = document.getElementById(id);
-             if(!setRandomEl.value){setRandomEl.value = generateRandom();}
-        }
 
-             function generateRandom() {
+
+        const generateRandom = () => {
                 const charset =
                     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
                 let password = '';
@@ -898,6 +899,36 @@
                 }
                 return password;
             }
+        const setRandom = (id) => {
+             const setRandomEl = document.getElementById(id);
+             if(!setRandomEl.value){setRandomEl.value = generateRandom();}
+        }
+        
+       const allRandom = (subName) => {
+            var inSubData = inputsSubData[subName];
+            for (const inSData of inSubData) {
+                    setRandom(inSData.id);
+            }
+            
+       }
+       const allClear = (subName) => {
+            var inSubData = inputsSubData[subName];
+            for (const inSData of inSubData) {
+                    inSData.value = "";
+            }
+            
+       }
+
+        const copyToClipboard = (text) => {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('📋 New Codes Copied to clipboard');
+        }
+            
         let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
         const IsDuplicates = (obj) => {
              var arr = [];
