@@ -124,5 +124,5 @@ Copy-paste directly into Workers or download for Pages deployment (zip first).
 
   gtag('config', 'G-THQL9EQWDS');
 </script>
-<style> html {direction: rtl;} </style>
+<style> html {direction: ltr;} </style>
 </details>
