@@ -4,6 +4,10 @@
 </h1>
 <h2 align="center">حل مشکل خطای 1011</h2>
 
+[**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)
+
+---
+
 
 😎 به وسیله [این پروژه](https://github.com/liMilCo/BPB-ReCoder) :      https://liMilCo.github.io/BPB-ReCoder 
 <p align="left">
