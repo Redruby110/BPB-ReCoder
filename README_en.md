@@ -22,7 +22,7 @@ You can fully customize the panel codes. Since Cloudflare reviews and bans proje
 
 ### Paste original BPB project codes in the first box:
 
-<img src="./1.png" width="100%">
+<img src="doc/1.png" width="100%">
 
 <h3>Get Project Codes: 
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel" target="_blank">BPB-Worker-Panel</a>
@@ -45,7 +45,7 @@ You can fully customize the panel codes. Since Cloudflare reviews and bans proje
 
 **Open fields are mandatory. Closed fields like (Main Page) or (Sub Functions) can be left empty**
 
-<img src="./2.png" width="100%">
+<img src="doc/2.png" width="100%">
 
 Note: When deploying your customized project on GitHub, replace `panel` in the URL:
 <br>
@@ -60,7 +60,7 @@ If entering a custom URL:
 - Ensure correct spelling
 - Choose lightweight sites to avoid overloading Cloudflare
 
-<img src="./3.png" width="100%">
+<img src="doc/3.png" width="100%">
 
 ### Enter KV Database & Cloudflare Variables (Mandatory 😱)
 
@@ -75,11 +75,11 @@ Also change these variables used in `Settings` > `Variables and Secrets`:
 
 📝 Variable names: English letters (case-sensitive)
 
-<img src="./4.png" width="100%">
+<img src="doc/4.png" width="100%">
 
 Example:
 
-<img src="./5.png" width="100%">
+<img src="doc/5.png" width="100%">
 
 ### Note: Case sensitivity matters! Store these names securely.
 
@@ -92,7 +92,7 @@ Original function names like `vlessOverWSHandler` and `handleTCPOutBound` are ea
 
 Click 🎁 to generate random names.
 
-<img src="./6.png" width="100%">
+<img src="doc/6.png" width="100%">
 
 ### Advanced Function Renaming (Optional 😴)
 
@@ -100,20 +100,20 @@ Sub-functions can also be renamed for extra security (not mandatory).
 
 📝 English words only (min 5 chars)
 
-<img src="./7.png" width="100%">
+<img src="doc/7.png" width="100%">
 
 ## Third Step
 
 Click `Generate New BPB 🌊` to apply changes.  
 Modified codes will appear in the box - ready to download.
 
-<img src="./8.png" width="100%">
+<img src="doc/8.png" width="100%">
 
 ## Fourth Step  
 Use `Obfuscator Code 💨` to obfuscate generated code.  
 Copy-paste directly into Workers or download for Pages deployment (zip first).
 
-<img src="./9.png" width="100%">
+<img src="doc/9.png" width="100%">
 
 <details>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-THQL9EQWDS"></script>
