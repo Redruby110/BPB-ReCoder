@@ -290,7 +290,7 @@
         </style>
     </head>
     <body>
-        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.6</h1>
+        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.7</h1>
         <div class="form-container">
             <h2>کد اصلي پروژه را اینجا وارد کنيد:</h2>
             <div class="table-container">
@@ -781,7 +781,9 @@
         mTheCode = mTheCode.replaceAll('BPB - Best Ping', 'Best Ping');
         mTheCode = mTheCode.replaceAll('https://raw.githubusercontent.com/bia-pain-bache', '${atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JpYS1wYWluLWJhY2hl")}');
 
-
+        if(HomePage.value){
+            mTheCode = mTheCode.replaceAll(atob("aWYgKHVybC5wYXRobmFtZSAhPT0gIi8iKQ=="), atob("aWYgKGZhbHNlKQ=="));
+        }
              return mTheCode;
         }
 
