@@ -126,6 +126,8 @@
 <img src="doc/9.png" width="100%">
 
 
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/liMilCo/BPB-ReCoder.svg?variant=adaptive)](https://starchart.cc/liMilCo/BPB-ReCoder)
 <details>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-THQL9EQWDS"></script>
 <script>
