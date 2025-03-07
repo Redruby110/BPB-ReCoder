@@ -290,7 +290,7 @@
         </style>
     </head>
     <body>
-        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.7</h1>
+        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.8</h1>
         <div class="form-container">
             <h2>کد اصلي پروژه را اینجا وارد کنيد:</h2>
             <div class="table-container">
@@ -406,7 +406,7 @@
                     </div>
                 </details>
                 <!--- ////////////////////////////  Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-                <details open>
+                <details>
                     <summary><h2>توابع اصلي</h2></summary>
 
                     
@@ -416,42 +416,42 @@
                     </div>                   
                     <div class="form-control">
                         <label for="vlessOverWSHandler">vlessOverWSHandler() <a title="Generate Random Functions Name" class="random" onclick="setRandom('vlessOverWSHandler')">🎁</a></label>
-                        <input type="text" id="vlessOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="vlessOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_vlessOverWSHandler" value="vlessOverWSHandler">
                     </div>
                     <div class="form-control">
                         <label for="trojanOverWSHandler">trojanOverWSHandler() <a title="Generate Random Functions Name" class="random" onclick="setRandom('trojanOverWSHandler')">🎁</a></label>
-                        <input type="text" id="trojanOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="trojanOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_trojanOverWSHandler" value="trojanOverWSHandler">
                     </div>
                     <div class="form-control">
                         <label for="handleTCPOutBound">handleTCPOutBound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('handleTCPOutBound')">🎁</a></label>
-                        <input type="text" id="handleTCPOutBound" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="handleTCPOutBound" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_handleTCPOutBound" value="handleTCPOutBound">
                     </div>
                     <div class="form-control">
                         <label for="makeReadableWebSocketStream">makeReadableWebSocketStream() <a title="Generate Random Functions Name" class="random" onclick="setRandom('makeReadableWebSocketStream')">🎁</a></label>
-                        <input type="text" id="makeReadableWebSocketStream" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="makeReadableWebSocketStream" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_makeReadableWebSocketStream" value="makeReadableWebSocketStream">
                     </div>
                     <div class="form-control">
                         <label for="processVlessHeader">processVlessHeader() <a title="Generate Random Functions Name" class="random" onclick="setRandom('processVlessHeader')">🎁</a></label>
-                        <input type="text" id="processVlessHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="processVlessHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_processVlessHeader" value="processVlessHeader">
                     </div>
                     <div class="form-control">
                         <label for="vlessRemoteSocketToWS">vlessRemoteSocketToWS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('vlessRemoteSocketToWS')">🎁</a></label>
-                        <input type="text" id="vlessRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="vlessRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_vlessRemoteSocketToWS" value="vlessRemoteSocketToWS">
                     </div>
                      <div class="form-control">
                         <label for="trojanRemoteSocketToWS">trojanRemoteSocketToWS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('trojanRemoteSocketToWS')">🎁</a></label>
-                        <input type="text" id="trojanRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="trojanRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_trojanRemoteSocketToWS" value="trojanRemoteSocketToWS">
                     </div>
                     <div class="form-control">
                         <label for="parseTrojanHeader">parseTrojanHeader() <a title="Generate Random Functions Name" class="random" onclick="setRandom('parseTrojanHeader')">🎁</a></label>
-                        <input type="text" id="parseTrojanHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$" required>
+                        <input type="text" id="parseTrojanHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
                         <input type="hidden" id="_parseTrojanHeader" value="parseTrojanHeader">
                     </div>
                  </details>
@@ -729,7 +729,11 @@
                 for (const inData of inputsData) {
                     const SrchData  = document.getElementById('_'+inData.id);
                     var SrchPrfx;
-                    if(SrchData.value.startsWith("env.")){SrchPrfx = "env."}else if(SrchData.value.startsWith("/")){SrchPrfx = "/"}else{SrchPrfx = ""}
+                    if(SrchData.value.startsWith("env.")){SrchPrfx = "env."}
+                        else if(SrchData.value.startsWith("/")){SrchPrfx = "/"}
+                        else if(SrchData.value.startsWith("r.")){SrchPrfx = "r."}
+                        else{SrchPrfx = ""}
+
                     //alert(SrchData.value +" = "+ inData.value +" - "+inData.id+" + "+SrchPrfx);
                     if(inData.value){
                         TheCode = TheCode.replaceAll(SrchData.value, SrchPrfx + inData.value);
@@ -739,7 +743,10 @@
 
 
                 if(HomePage.value){
-                    if(TheCode.search("fallbackDomain = ") > 1){
+                    if(TheCode.search("globalThis.fallbackDomain=r.FALLBACK") > 1){
+                       TheCode = TheCode.replaceAll('globalThis.fallbackDomain=r.FALLBACK||"', 'globalThis.fallbackDomain=r.FALLBACK||"'+HomePage.value+'" ||"'); 
+                    }else if(TheCode.search("fallbackDomain = ") > 1){
+                        //globalThis.fallbackDomain=r.FALLBACK||"speed.cloudflare.com"
                       TheCode = TheCode.replaceAll('fallbackDomain = env.FALLBACK || "', 'fallbackDomain = env.FALLBACK || "'+HomePage.value+'"; //"');
                     }else{
                       TheCode = TheCode.replaceAll('url.hostname = "', 'url.hostname = "'+HomePage.value+'"; //"');
@@ -784,6 +791,15 @@
         if(HomePage.value){
             mTheCode = mTheCode.replaceAll(atob("aWYgKHVybC5wYXRobmFtZSAhPT0gIi8iKQ=="), atob("aWYgKGZhbHNlKQ=="));
         }
+        if(mTheCode.search(".kv.put") > 1){
+            var newKVname = "kv";
+            if(document.getElementById('envbpb').value){
+                newKVname = document.getElementById('envbpb').value;
+            }
+            mTheCode = mTheCode.replaceAll(".kv.put", "."+newKVname+".put");
+            mTheCode = mTheCode.replaceAll(".kv.get", "."+newKVname+".get");
+        }
+
              return mTheCode;
         }
 
@@ -991,17 +1007,6 @@ function GetBPBVrsion(InInt) {
 
 function CheckBPBVrsion(){
     var BPBVersion = GetBPBVrsion();
-
-        if(SrcCode.value.search("env.kv") > 1){
-                document.getElementById('_envbpb').value = 'env.kv';
-        }else{
-                document.getElementById('_envbpb').value = 'env.bpb';
-        }
-        if(SrcCode.value.search("env.TR_PASS") > 1){
-                document.getElementById('_envtrojanpass').value = 'env.TR_PASS';
-        }else{
-                document.getElementById('_envtrojanpass').value = 'env.TROJAN_PASS';
-        }
         var NewWordVer = {
                 "vlessOverWSHandler":"VLOverWSHandler",
                 "trojanOverWSHandler":"TROverWSHandler",
@@ -1013,8 +1018,7 @@ function CheckBPBVrsion(){
                 "buildXrayTrojanOutbound":"buildXrayTROutbound",
                 "buildSingBoxVLESSOutbound":"buildSingBoxVLOutbound",
                 "buildSingBoxTrojanOutbound":"buildSingBoxTROutbound",
-                "buildClashVLESSOutbound":"buildClashVLOutbound",
-                "buildClashTrojanOutbound":"buildClashTROutbound"
+                "buildClashVLESSOutbound":"buildClashVLOutbound"
 
             };
         for (var OldWord in NewWordVer) {
@@ -1023,7 +1027,27 @@ function CheckBPBVrsion(){
             }else{
                 document.getElementById("_"+OldWord).value = OldWord;
             }
-    }
+        }
+
+         let NewWordData = {
+                "envbpb" : [
+                    "env.bpb",
+                    "env.kv",
+                    "r.kv"
+                ],
+                "envuuid":["env.UUID", "r.UUID"],
+                "envtrojanpass":["env.TROJAN_PASS", "env.TR_PASS", "r.TR_PASS"],
+                "envproxyip":["env.PROXYIP", "r.PROXYIP"]
+
+            };
+        for (var DataID in NewWordData) {
+            NewWordData[DataID].forEach(key => {
+                if(SrcCode.value.search(key) > 1){
+                    document.getElementById("_"+DataID).value = key;
+                }                
+            });
+
+        }       
     alert("✔️ BPB v"+BPBVersion+" Loaded.");
 }
 
