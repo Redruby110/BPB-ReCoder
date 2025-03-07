@@ -272,7 +272,7 @@
                     justify-content: center;
                 }
                 .button-container button{margin-left: 10px;}
-                .form-control button{width: 98% }
+                .form-control button, .form-control select{width: 98% }
                 #apply { display: block; margin: 20px auto 0 auto; max-width: 50%; }
                 .modal-content { width: 30% }
                 .routing { display: grid; grid-template-columns: 4fr 1fr 3fr 4fr; }
@@ -302,20 +302,19 @@
                 * توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
                 <br>
 #                دریافت کد های پروژه:
-                    <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel" target="_blank">BPB-Worker-Panel</a>
-                <center>
-                <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v2.7.4/worker.js" title="BPB 2.7.4" target="_blank">BPB 2.7.4</a>
-                -
-                <a href="https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js" title="BPB 2.8.1" target="_blank">BPB 2.8.1</a>
-                -
-                <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v3/unobfuscated-worker.js" title="BPB 3.0.0" target="_blank">BPB 3.0.0</a>
-                -
-                <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases" title="BPB 3.0.0" target="_blank">BPB Releases</a>
-                <center>
+                    <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases" target="_blank">BPB-Worker-Panel</a>
+
             </div>
             <div class="form-control">
-                <button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/worker.2.8.1.js')">AutoLoad BPB 2.8.1</button>
+
+
+                            <select id="selectBPB" onchange="GetSelectedBPB()">
+                                <option value="worker.js" selected="selected">BPB Latest</option>
+                            </select>
+                    
+
                 <button type="button" class="button" onclick="SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/worker.js')">AutoLoad BPB Latest</button>
+
 
 
             </div>
@@ -714,6 +713,7 @@
             HomePage.value = localStorage.getItem('homePage');
             if(HomePage.value){document.getElementById('home-box').open = true;}
 
+            SetSelectedBPB();
         });
        configForm.addEventListener('submit', (event) => applySettings());
        
@@ -1066,6 +1066,31 @@ function SetBPBCode(BPBCodeLink){
        SrcCode.value = BPBCode;
        CheckBPBVrsion();
 }
+
+function GetSelectedBPB(){
+  var selectBPB = document.getElementById("selectBPB");
+  SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/'+selectBPB.value)
+  //var selectBPBLink = "";
+} 
+
+
+function SetSelectedBPB(){
+    var selectBPB = document.getElementById("selectBPB");
+    var  BPBList = GetBPBCode("https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/list");
+    var BPBListH = BPBList.split("\n");
+
+        BPBListH.forEach(BPBListV => {
+            if(BPBListV.includes(":")){    
+                var selectBPBopt = document.createElement('option');
+                selectBPBopt.value = BPBListV.split(":")[1];
+                selectBPBopt.innerHTML = BPBListV.split(":")[0];
+                selectBPB.appendChild(selectBPBopt); 
+            }             
+        });
+}
+
+
+
     </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-THQL9EQWDS"></script>
