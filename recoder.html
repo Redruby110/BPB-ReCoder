@@ -290,16 +290,16 @@
         </style>
     </head>
     <body>
-        <h1 class="rtl">تغيير کلمات کليدي پنل 💦 - 8.8.8</h1>
+        <h1 class="rtl">تغییر کلمات کلیدی پنل 💦 - 8.8.9</h1>
         <div class="form-container">
-            <h2>کد اصلي پروژه را اینجا وارد کنيد:</h2>
+            <h2>کد اصلی پروژه را اینجا وارد کنید:  <span id="BPBVrsionLoaded"></span></h2>
             <div class="table-container">
                 <textarea id="maincode" onchange="CheckBPBVrsion()"></textarea>
             </div>
 
 
             <div class="form-control rtl note">
-                * توجه کنيد اين کد نبايد obfuscation شده باشد، بعد از اينکه اين تغييرات را انجام دادید؛ کد را obfuscation کنيد و بعد در کلودفلر اجرا نماييد.
+                * توجه کنید این کد نباید obfuscation شده باشد، بعد از اینکه این تغییرات را انجام دادید؛ کد را obfuscation کنید و بعد در کلودفلر اجرا نمایید.
                 <br>
 #                دریافت کد های پروژه:
                     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases" target="_blank">BPB-Worker-Panel</a>
@@ -322,7 +322,7 @@
         <div class="form-container">
 
             <div class="form-control rtl">
-*           کلماتي که انتخاب ميکنيد نبايد تکراري باشد وگرنه سيستم دچار مشکل ميشود.
+*           کلماتی که انتخاب میکنید نباید تکراری باشد وگرنه سیستم دچار مشکل میشود.
             </div>
         <hr />
             <form id="configForm">
@@ -330,32 +330,32 @@
                 <details open>
 
 
-                    <summary><h2>آدرس هاي دسترسي به پنل</h2></summary>
+                    <summary><h2>آدرس های دسترسی به پنل</h2></summary>
                     <div class="form-control">
                         <label for="panel">/panel</label>
-                        <input type="text" id="panel" name="bpbdataURL" value="" placeholder="administrator" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="panel" name="bpbdataURL" value="" placeholder="administrator" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگلیسی" required>
                         <input type="hidden" id="_panel" value="/panel">
                     </div>
                     <div class="form-control rtl">
-                    * اين نام را بخاطر بسپاريد. چون با اين کلمه ميتوانيد وارد پنل شويد
+                    * این نام را بخاطر بسپارید. چون با این کلمه میتوانید وارد پنل شوید
                     </div>
                     <div class="form-control">
                         <label for="login">/login</label>
-                        <input type="text" id="login" name="bpbdataURL" data="/login" value="" placeholder="signin" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="login" name="bpbdataURL" data="/login" value="" placeholder="signin" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگلیسی" required>
                         <input type="hidden" id="_login" value="/login">
                     </div>
                     <div class="form-control">
                         <label for="secrets">/secrets</label>
-                        <input type="text" id="secrets" name="bpbdataURL" value="" placeholder="autogen" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="secrets" name="bpbdataURL" value="" placeholder="autogen" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگلیسی" required>
                         <input type="hidden" id="_secrets" value="/secrets">
                     </div>
                 </details>
                 <!--- ////////////////////////////  Variables  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                 <details id="home-box">
-                    <summary><h2>صفحه اصلي</h2></summary>
+                    <summary><h2>صفحه اصلی</h2></summary>
                     <div class="form-control">
                         <label for="homePage">www.speedtest.net (Home page)</label>
-                        <input type="text" id="homePage" name="homePage" value="" placeholder="speed.cloudflare.com" pattern="[a-z0-9.]{3,}$" list="hostsample" title="سايتي که بجاي صفحه اصلي نمايش داده ميشود">
+                        <input type="text" id="homePage" name="homePage" value="" placeholder="speed.cloudflare.com" pattern="[a-z0-9.]{3,}$" list="hostsample" title="سایتی که بجای صفحه اصلی نمایش داده میشود">
                         <datalist id='hostsample'>
                         <option value='www.speedtest.net'>
                         <option value='speed.cloudflare.com'>
@@ -367,7 +367,7 @@
 
                     </div>
                     <div class="form-control rtl">
-                    * سايتي را انتخاب بکنيد که ساده و سبک باشد. سايت هاي شلوغ و سنگين فشار زيادي به سرور خواهند آورد.
+                    * سایتی را انتخاب بکنید که ساده و سبک باشد. سایت های شلوغ و سنگین فشار زیادی به سرور خواهند آورد.
                     <br>
                     * در ورژن های جدید می توانید با کلمه FALLBACK در تنظیمات (Variables and Secrets) کلودفلر این آدرس را تغییر دهید
                     </div>
@@ -375,38 +375,38 @@
                 </details>
                 <!--- ////////////////////////////  Variables  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                 <details open>
-                    <summary><h2>متغير هاي کلودفلر (Variables and Secrets)</h2></summary>
+                    <summary><h2>متغیر های کلودفلر (Variables and Secrets)</h2></summary>
                     <div class="form-control">
                         <label for="envbpb">bpb  --> (KV)</label>
-                        <input type="text" id="envbpb" name="bpbdataVAR" value="" placeholder="data" pattern="[a-z]{2,}$" title="فقط حروف کوچک انگليسي" required>
+                        <input type="text" id="envbpb" name="bpbdataVAR" value="" placeholder="data" pattern="[a-z]{2,}$" title="فقط حروف کوچک انگلیسی" required>
                         <input type="hidden" id="_envbpb" value="env.bpb">
                     </div>
                     <div class="form-control rtl">
-                      * با اين نام ديتابيس KV را به پروژه متصل خواهيد کرد.
+                      * با این نام دیتابیس KV را به پروژه متصل خواهید کرد.
                     </div>
                     <hr >
                     <div class="form-control">
                         <label for="envuuid">UUID</label>
-                        <input type="text" id="envuuid" name="bpbdataVAR" value="" placeholder="Key" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
+                        <input type="text" id="envuuid" name="bpbdataVAR" value="" placeholder="Key" pattern="[a-zA-Z]{2,}$" title="حروف انگلیسی" required>
                         <input type="hidden" id="_envuuid" value="env.UUID">
                     </div>
                     <div class="form-control">
                         <label for="envtrojanpass">TROJAN_PASS</label>
-                        <input type="text" id="envtrojanpass" name="bpbdataVAR" value="" placeholder="MyPass" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
+                        <input type="text" id="envtrojanpass" name="bpbdataVAR" value="" placeholder="MyPass" pattern="[a-zA-Z]{2,}$" title="حروف انگلیسی" required>
                         <input type="hidden" id="_envtrojanpass" value="env.TROJAN_PASS">
                     </div>
                     <div class="form-control">
                         <label for="envproxyip">PROXYIP</label>
-                        <input type="text" id="envproxyip" name="bpbdataVAR" value="" placeholder="PxIP" pattern="[a-zA-Z]{2,}$" title="حروف انگليسي" required>
+                        <input type="text" id="envproxyip" name="bpbdataVAR" value="" placeholder="PxIP" pattern="[a-zA-Z]{2,}$" title="حروف انگلیسی" required>
                         <input type="hidden" id="_envproxyip" value="env.PROXYIP">
                     </div>
                     <div class="form-control rtl">
-                      * توجه کنيد که بايد دقيقا از اين کلمات براي وارد کردن متغيير به کلودفلر استفاده کنيد
+                      * توجه کنید که باید دقیقا از این کلمات برای وارد کردن متغییر به کلودفلر استفاده کنید
                     </div>
                 </details>
                 <!--- ////////////////////////////  Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
                 <details>
-                    <summary><h2>توابع اصلي</h2></summary>
+                    <summary><h2>توابع اصلی</h2></summary>
 
                     
                      <div class="form-control">
@@ -623,7 +623,7 @@
                 </div>
             </form>
             <hr>
-            <h2>کدهاي تغيير يافته:</h2>
+            <h2>کدهای تغییر یافته:</h2>
             <div class="table-container">
                 <textarea id="gencode" style="height: 20rem;"></textarea>
             </div>
@@ -640,12 +640,12 @@
 
                     </div>
              </div>
-            <h2>کد هاي obfuscator شده:</h2>
+            <h2>کد های obfuscator شده:</h2>
             <div class=" form-control rtl" style="display: none;">
-                 <label for="renameObf"> شکستن و تغيير تمام کلمات کليدي
+                 <label for="renameObf"> شکستن و تغییر تمام کلمات کلیدی
                   <input type="checkbox" id="renameObf" onchange="renGlobObf()">  </label>
                   👈
-                  اين گزينه کلماتی مانند vless را میشکند اما پروژه را حجيم تر نيز خواهد کرد
+                  این گزینه کلماتی مانند vless را میشکند اما پروژه را حجیم تر نیز خواهد کرد
 
 
             </div>
@@ -714,6 +714,8 @@
             if(HomePage.value){document.getElementById('home-box').open = true;}
 
             SetSelectedBPB();
+            allRandom('FUN1');
+            allRandom('FUN2');            
         });
        configForm.addEventListener('submit', (event) => applySettings());
        
@@ -1049,6 +1051,7 @@ function CheckBPBVrsion(){
 
         }       
     alert("✔️ BPB v"+BPBVersion+" Loaded.");
+    document.getElementById("BPBVrsionLoaded").innerHTML = "✔️(BPB v"+BPBVersion+") ";
 }
 
 function GetBPBCode(theUrl){
