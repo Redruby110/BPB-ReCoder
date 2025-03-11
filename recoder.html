@@ -290,7 +290,7 @@
         </style>
     </head>
     <body>
-        <h1 class="rtl">تغییر کلمات کلیدی پنل 💦 - 8.8.9</h1>
+        <h1 class="rtl">تغییر کلمات کلیدی پنل 💦 - 8.9.0</h1>
         <div class="form-container">
             <h2>کد اصلی پروژه را اینجا وارد کنید:  <span id="BPBVrsionLoaded"></span></h2>
             <div class="table-container">
@@ -334,7 +334,7 @@
                     <div class="form-control">
                         <label for="panel">/panel</label>
                         <input type="text" id="panel" name="bpbdataURL" value="" placeholder="administrator" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگلیسی" required>
-                        <input type="hidden" id="_panel" value="/panel">
+                        <input type="hidden" id="_panel" value="/|panel">
                     </div>
                     <div class="form-control rtl">
                     * این نام را بخاطر بسپارید. چون با این کلمه میتوانید وارد پنل شوید
@@ -342,12 +342,12 @@
                     <div class="form-control">
                         <label for="login">/login</label>
                         <input type="text" id="login" name="bpbdataURL" data="/login" value="" placeholder="signin" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگلیسی" required>
-                        <input type="hidden" id="_login" value="/login">
+                        <input type="hidden" id="_login" value="/|login">
                     </div>
                     <div class="form-control">
                         <label for="secrets">/secrets</label>
                         <input type="text" id="secrets" name="bpbdataURL" value="" placeholder="autogen" pattern="[a-z]{3,}$" title="فقط حروف کوچک انگلیسی" required>
-                        <input type="hidden" id="_secrets" value="/secrets">
+                        <input type="hidden" id="_secrets" value="/|secrets">
                     </div>
                 </details>
                 <!--- ////////////////////////////  Variables  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
@@ -379,7 +379,7 @@
                     <div class="form-control">
                         <label for="envbpb">bpb  --> (KV)</label>
                         <input type="text" id="envbpb" name="bpbdataVAR" value="" placeholder="data" pattern="[a-z]{2,}$" title="فقط حروف کوچک انگلیسی" required>
-                        <input type="hidden" id="_envbpb" value="env.bpb">
+                        <input type="hidden" id="_envbpb" value="env.|bpb,env.|kv,r.|kv,t.|kv">
                     </div>
                     <div class="form-control rtl">
                       * با این نام دیتابیس KV را به پروژه متصل خواهید کرد.
@@ -388,17 +388,17 @@
                     <div class="form-control">
                         <label for="envuuid">UUID</label>
                         <input type="text" id="envuuid" name="bpbdataVAR" value="" placeholder="Key" pattern="[a-zA-Z]{2,}$" title="حروف انگلیسی" required>
-                        <input type="hidden" id="_envuuid" value="env.UUID">
+                        <input type="hidden" id="_envuuid" value="env.|UUID,r.|UUID">
                     </div>
                     <div class="form-control">
                         <label for="envtrojanpass">TROJAN_PASS</label>
                         <input type="text" id="envtrojanpass" name="bpbdataVAR" value="" placeholder="MyPass" pattern="[a-zA-Z]{2,}$" title="حروف انگلیسی" required>
-                        <input type="hidden" id="_envtrojanpass" value="env.TROJAN_PASS">
+                        <input type="hidden" id="_envtrojanpass" value="env.|TROJAN_PASS,env.|TR_PASS,r.|TR_PASS">
                     </div>
                     <div class="form-control">
                         <label for="envproxyip">PROXYIP</label>
                         <input type="text" id="envproxyip" name="bpbdataVAR" value="" placeholder="PxIP" pattern="[a-zA-Z]{2,}$" title="حروف انگلیسی" required>
-                        <input type="hidden" id="_envproxyip" value="env.PROXYIP">
+                        <input type="hidden" id="_envproxyip" value="env.|PROXYIP,r.|PROXYIP">
                     </div>
                     <div class="form-control rtl">
                       * توجه کنید که باید دقیقا از این کلمات برای وارد کردن متغییر به کلودفلر استفاده کنید
@@ -416,12 +416,12 @@
                     <div class="form-control">
                         <label for="vlessOverWSHandler">vlessOverWSHandler() <a title="Generate Random Functions Name" class="random" onclick="setRandom('vlessOverWSHandler')">🎁</a></label>
                         <input type="text" id="vlessOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_vlessOverWSHandler" value="vlessOverWSHandler">
+                        <input type="hidden" id="_vlessOverWSHandler" value="vlessOverWSHandler,VLOverWSHandler">
                     </div>
                     <div class="form-control">
                         <label for="trojanOverWSHandler">trojanOverWSHandler() <a title="Generate Random Functions Name" class="random" onclick="setRandom('trojanOverWSHandler')">🎁</a></label>
                         <input type="text" id="trojanOverWSHandler" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_trojanOverWSHandler" value="trojanOverWSHandler">
+                        <input type="hidden" id="_trojanOverWSHandler" value="trojanOverWSHandler,TROverWSHandler">
                     </div>
                     <div class="form-control">
                         <label for="handleTCPOutBound">handleTCPOutBound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('handleTCPOutBound')">🎁</a></label>
@@ -436,22 +436,22 @@
                     <div class="form-control">
                         <label for="processVlessHeader">processVlessHeader() <a title="Generate Random Functions Name" class="random" onclick="setRandom('processVlessHeader')">🎁</a></label>
                         <input type="text" id="processVlessHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_processVlessHeader" value="processVlessHeader">
+                        <input type="hidden" id="_processVlessHeader" value="processVlessHeader,processVLHeader">
                     </div>
                     <div class="form-control">
                         <label for="vlessRemoteSocketToWS">vlessRemoteSocketToWS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('vlessRemoteSocketToWS')">🎁</a></label>
                         <input type="text" id="vlessRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_vlessRemoteSocketToWS" value="vlessRemoteSocketToWS">
+                        <input type="hidden" id="_vlessRemoteSocketToWS" value="vlessRemoteSocketToWS,VLRemoteSocketToWS">
                     </div>
                      <div class="form-control">
                         <label for="trojanRemoteSocketToWS">trojanRemoteSocketToWS() <a title="Generate Random Functions Name" class="random" onclick="setRandom('trojanRemoteSocketToWS')">🎁</a></label>
                         <input type="text" id="trojanRemoteSocketToWS" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_trojanRemoteSocketToWS" value="trojanRemoteSocketToWS">
+                        <input type="hidden" id="_trojanRemoteSocketToWS" value="trojanRemoteSocketToWS,TRRemoteSocketToWS">
                     </div>
                     <div class="form-control">
                         <label for="parseTrojanHeader">parseTrojanHeader() <a title="Generate Random Functions Name" class="random" onclick="setRandom('parseTrojanHeader')">🎁</a></label>
                         <input type="text" id="parseTrojanHeader" name="bpbdataFUN1" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_parseTrojanHeader" value="parseTrojanHeader">
+                        <input type="hidden" id="_parseTrojanHeader" value="parseTrojanHeader,parseTRHeader">
                     </div>
                  </details>
                 <!--- ////////////////////////////  Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
@@ -469,12 +469,12 @@
                     <div class="form-control">
                         <label for="buildXrayVLESSOutbound">buildXrayVLESSOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayVLESSOutbound')">🎁</a></label>
                         <input type="text" id="buildXrayVLESSOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_buildXrayVLESSOutbound" value="buildXrayVLESSOutbound">
+                        <input type="hidden" id="_buildXrayVLESSOutbound" value="buildXrayVLESSOutbound,buildXrayVLOutbound">
                     </div>
                     <div class="form-control">
                         <label for="SSS">buildXrayTrojanOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayTrojanOutbound')">🎁</a></label>
                         <input type="text" id="buildXrayTrojanOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_buildXrayTrojanOutbound" value="buildXrayTrojanOutbound">
+                        <input type="hidden" id="_buildXrayTrojanOutbound" value="buildXrayTrojanOutbound,buildXrayTROutbound">
                     </div>
                     <div class="form-control">
                         <label for="buildXrayWarpOutbound">buildXrayWarpOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildXrayWarpOutbound')">🎁</a></label>
@@ -528,13 +528,13 @@
                      <div class="form-control">
                         <label for="buildSingBoxVLESSOutbound">buildSingBoxVLESSOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxVLESSOutbound')">🎁</a></label>
                         <input type="text" id="buildSingBoxVLESSOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_buildSingBoxVLESSOutbound" value="buildSingBoxVLESSOutbound">
+                        <input type="hidden" id="_buildSingBoxVLESSOutbound" value="buildSingBoxVLESSOutbound,buildSingBoxVLOutbound">
                     </div>
 
                      <div class="form-control">
                         <label for="buildSingBoxTrojanOutbound">buildSingBoxTrojanOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildSingBoxTrojanOutbound')">🎁</a></label>
                         <input type="text" id="buildSingBoxTrojanOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_buildSingBoxTrojanOutbound" value="buildSingBoxTrojanOutbound">
+                        <input type="hidden" id="_buildSingBoxTrojanOutbound" value="buildSingBoxTrojanOutbound,buildSingBoxTROutbound">
                     </div>
 
                      <div class="form-control">
@@ -572,12 +572,12 @@
                      <div class="form-control">
                         <label for="buildClashVLESSOutbound">buildClashVLESSOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashVLESSOutbound')">🎁</a></label>
                         <input type="text" id="buildClashVLESSOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_buildClashVLESSOutbound" value="buildClashVLESSOutbound">
+                        <input type="hidden" id="_buildClashVLESSOutbound" value="buildClashVLESSOutbound,buildClashVLOutbound">
                     </div>
                      <div class="form-control">
                         <label for="buildClashTrojanOutbound">buildClashTrojanOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashTrojanOutbound')">🎁</a></label>
                         <input type="text" id="buildClashTrojanOutbound" name="bpbdataFUN2" value="" pattern="[a-zA-Z]{5,}$">
-                        <input type="hidden" id="_buildClashTrojanOutbound" value="buildClashTrojanOutbound">
+                        <input type="hidden" id="_buildClashTrojanOutbound" value="buildClashTrojanOutbound,buildClashTROutbound">
                     </div>
                      <div class="form-control">
                         <label for="buildClashWarpOutbound">buildClashWarpOutbound() <a title="Generate Random Functions Name" class="random" onclick="setRandom('buildClashWarpOutbound')">🎁</a></label>
@@ -731,15 +731,25 @@
                 for (const inData of inputsData) {
                     const SrchData  = document.getElementById('_'+inData.id);
                     var SrchPrfx;
-                    if(SrchData.value.startsWith("env.")){SrchPrfx = "env."}
-                        else if(SrchData.value.startsWith("/")){SrchPrfx = "/"}
-                        else if(SrchData.value.startsWith("r.")){SrchPrfx = "r."}
-                        else{SrchPrfx = ""}
+                    let SrchDataS = [];
 
-                    //alert(SrchData.value +" = "+ inData.value +" - "+inData.id+" + "+SrchPrfx);
-                    if(inData.value){
-                        TheCode = TheCode.replaceAll(SrchData.value, SrchPrfx + inData.value);
+                    if(SrchData.value.includes(",")){
+                        SrchDataS = SrchData.value.split(",");
+                    }else{
+                        SrchDataS = [SrchData.value];
                     }
+                    SrchDataS.forEach((SrchData_value) => {
+                        SrchPrfx = "";
+                        if(SrchData_value.includes("|")){
+                            SrchPrfx = SrchData_value.split("|")[0];
+                            SrchData_value = SrchData_value.replace("|","");
+                        }
+                        if(inData.value){
+                            TheCode = TheCode.replaceAll(SrchData_value, SrchPrfx + inData.value);
+                            //if(SrcCode.value.search(SrchData_value) < 1){obfcode.value += SrchData_value+"\n";};// Log NotUsed //*************//
+                        }
+                    });
+
                     if(inputsSave.includes(inData.id)){localStorage.setItem(inData.id, inData.value);}
                 }
 
@@ -792,14 +802,6 @@
 
         if(HomePage.value){
             mTheCode = mTheCode.replaceAll(atob("aWYgKHVybC5wYXRobmFtZSAhPT0gIi8iKQ=="), atob("aWYgKGZhbHNlKQ=="));
-        }
-        if(mTheCode.search(".kv.put") > 1){
-            var newKVname = "kv";
-            if(document.getElementById('envbpb').value){
-                newKVname = document.getElementById('envbpb').value;
-            }
-            mTheCode = mTheCode.replaceAll(".kv.put", "."+newKVname+".put");
-            mTheCode = mTheCode.replaceAll(".kv.get", "."+newKVname+".get");
         }
 
              return mTheCode;
@@ -1009,47 +1011,7 @@ function GetBPBVrsion(InInt) {
 
 function CheckBPBVrsion(){
     var BPBVersion = GetBPBVrsion();
-        var NewWordVer = {
-                "vlessOverWSHandler":"VLOverWSHandler",
-                "trojanOverWSHandler":"TROverWSHandler",
-                "processVlessHeader":"processVLHeader",
-                "vlessRemoteSocketToWS":"VLRemoteSocketToWS",
-                "parseTrojanHeader":"parseTRHeader",
-                "trojanRemoteSocketToWS":"TRRemoteSocketToWS",
-                "buildXrayVLESSOutbound":"buildXrayVLOutbound",
-                "buildXrayTrojanOutbound":"buildXrayTROutbound",
-                "buildSingBoxVLESSOutbound":"buildSingBoxVLOutbound",
-                "buildSingBoxTrojanOutbound":"buildSingBoxTROutbound",
-                "buildClashVLESSOutbound":"buildClashVLOutbound"
 
-            };
-        for (var OldWord in NewWordVer) {
-            if(SrcCode.value.search(NewWordVer[OldWord]) > 1){
-                document.getElementById("_"+OldWord).value = NewWordVer[OldWord];
-            }else{
-                document.getElementById("_"+OldWord).value = OldWord;
-            }
-        }
-
-         let NewWordData = {
-                "envbpb" : [
-                    "env.bpb",
-                    "env.kv",
-                    "r.kv"
-                ],
-                "envuuid":["env.UUID", "r.UUID"],
-                "envtrojanpass":["env.TROJAN_PASS", "env.TR_PASS", "r.TR_PASS"],
-                "envproxyip":["env.PROXYIP", "r.PROXYIP"]
-
-            };
-        for (var DataID in NewWordData) {
-            NewWordData[DataID].forEach(key => {
-                if(SrcCode.value.search(key) > 1){
-                    document.getElementById("_"+DataID).value = key;
-                }                
-            });
-
-        }       
     alert("✔️ BPB v"+BPBVersion+" Loaded.");
     document.getElementById("BPBVrsionLoaded").innerHTML = "✔️(BPB v"+BPBVersion+") ";
 }
@@ -1073,13 +1035,12 @@ function SetBPBCode(BPBCodeLink){
 function GetSelectedBPB(){
   var selectBPB = document.getElementById("selectBPB");
   SetBPBCode('https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/'+selectBPB.value)
-  //var selectBPBLink = "";
 } 
 
 
-function SetSelectedBPB(){
+async function SetSelectedBPB(){
     var selectBPB = document.getElementById("selectBPB");
-    var  BPBList = GetBPBCode("https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/list");
+    var  BPBList = await GetBPBCode("https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/list");
     var BPBListH = BPBList.split("\n");
 
         BPBListH.forEach(BPBListV => {
