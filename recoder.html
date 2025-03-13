@@ -1046,7 +1046,7 @@ function GetSelectedBPB(){
 
 async function SetSelectedBPB(){
     var selectBPB = document.getElementById("selectBPB");
-    var  BPBList = await GetBPBCode("https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/list");
+    var  BPBList = await GetBPBCode("https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/bpb/list?=nocache"+ + Date.now());
     var BPBListH = BPBList.split("\n");
 
         BPBListH.forEach(BPBListV => {
