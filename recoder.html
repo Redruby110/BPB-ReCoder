@@ -1050,10 +1050,10 @@ async function SetSelectedBPB(){
     var BPBListH = BPBList.split("\n");
 
         BPBListH.forEach(BPBListV => {
-            if(BPBListV.includes(":")){    
+            if(BPBListV.includes("::")){    
                 var selectBPBopt = document.createElement('option');
-                selectBPBopt.value = BPBListV.split(":")[1];
-                selectBPBopt.innerHTML = BPBListV.split(":")[0];
+                selectBPBopt.value = BPBListV.split("::")[1];
+                selectBPBopt.innerHTML = BPBListV.split("::")[0];
                 selectBPB.appendChild(selectBPBopt); 
             }             
         });
