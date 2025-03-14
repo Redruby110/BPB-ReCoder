@@ -125,9 +125,14 @@
 
 <img src="doc/9.png" width="100%">
 
+## Project View
+![Counter](https://count.getloli.com/@BPB-ReCoder?name=BPB-ReCoder&theme=sketch-1&padding=5)
 
 ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/liMilCo/BPB-ReCoder.svg?variant=adaptive)](https://starchart.cc/liMilCo/BPB-ReCoder)
+
+
+
 <details>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-THQL9EQWDS"></script>
 <script>
