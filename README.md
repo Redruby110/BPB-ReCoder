@@ -2,7 +2,7 @@
 <h1 align="center">😎 شخصی سازی 
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel">پنل BPB 💦</a> 
 </h1>
-<h2 align="center">حل مشکل خطای 1011</h2>
+<h2 align="center">برای نسخه BPB v3.1.2</h2>
 
 [**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)
 
