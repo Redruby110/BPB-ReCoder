@@ -1,9 +1,8 @@
 <h1 align="center">😎 Customize  
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel">BPB Panel 💦</a> 
 </h1>
-<h2 align="center">Solving Error 1011 </h2>
 
-[**فارسی**](https://liMilCo.github.io/BPB-ReCoder)
+[**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)   -   [فارسی](https://liMilCo.github.io/BPB-ReCoder)
 
 ---
 
@@ -17,7 +16,7 @@
 </p>
 
 <p align="justify">
-You can fully customize the panel codes. Since Cloudflare reviews and bans projects by detecting codes, to avoid Error 1011 you must change keywords like function names, panel access URLs, variable data, and KV database identifiers. While some projects have done this, their new codes may eventually get detected. The best solution is for each user to create a panel with personalized codes, which this tool helps you achieve.
+You can customize the BPB Panel.
 </p>
 
 ## First Step
