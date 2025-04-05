@@ -41,17 +41,9 @@
 <img src="doc/1.png" width="100%">
 
 <h3>دریافت کد های پروژه: 
-    <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel" target="_blank">BPB-Worker-Panel</a>
+    <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases" target="_blank">💦 BPB Panel</a>
 </h3>
-<p align="center">
-    <strong>
-<a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v2.7.4/worker.js" target="_blank">BPB 2.7.4</a>
- - 
-<a href="https://raw.githubusercontent.com/liMilCo/BPB-ReCoder/main/worker.2.8.1.js" target="_blank">BPB 2.8.1</a>
- - 
-<a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/v3/unobfuscated-worker.js" target="_blank">BPB 3.0.0</a>
-    </strong>
-</p>
+
 
 
 
