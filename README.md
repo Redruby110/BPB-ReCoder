@@ -2,7 +2,7 @@
 <h1 align="center">😎 شخصی سازی 
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel">پنل BPB 💦</a> 
 </h1>
-<h2 align="center">پشتیبانی از BPB v3.1.3</h2>
+<h2 align="center">پشتیبانی تا BPB v3.1.4</h2>
 
 [**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)   -   [فارسی](https://liMilCo.github.io/BPB-ReCoder)
 
