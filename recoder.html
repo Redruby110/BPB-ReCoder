@@ -755,8 +755,8 @@
 
 
                 if(HomePage.value){
-                    if(TheCode.search("globalThis.fallbackDomain=r.FALLBACK") > 1){
-                       TheCode = TheCode.replaceAll('globalThis.fallbackDomain=r.FALLBACK||"', 'globalThis.fallbackDomain=r.FALLBACK||"'+HomePage.value+'" ||"'); 
+                    if(TheCode.search("globalThis.fallbackDomain=e.FALLBACK") > 1){
+                       TheCode = TheCode.replaceAll('globalThis.fallbackDomain=e.FALLBACK||"', 'globalThis.fallbackDomain=e.FALLBACK||"'+HomePage.value+'" ||"'); 
                     }else if(TheCode.search("fallbackDomain = ") > 1){
                         //globalThis.fallbackDomain=r.FALLBACK||"speed.cloudflare.com"
                       TheCode = TheCode.replaceAll('fallbackDomain = env.FALLBACK || "', 'fallbackDomain = env.FALLBACK || "'+HomePage.value+'"; //"');
