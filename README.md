@@ -4,7 +4,7 @@
 </h1>
 <h2 align="center">به علت عدم آپدیت کدهای خام BPB این پروژه از ورژن 3.1.3 به بعد را پشتیبانی نمیکند.</h2>
 
-[**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)   -   [فارسی](https://liMilCo.github.io/BPB-ReCoder)
+[**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)   -   [فارسی](https://liMilCo.github.io/BPB-ReCoder/README_fa)
 
 ---
 
