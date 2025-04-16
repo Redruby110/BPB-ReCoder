@@ -1,4 +1,3 @@
-    
 <h1 align="center">😎 شخصی سازی 
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel">پنل BPB 💦</a> 
 </h1>
