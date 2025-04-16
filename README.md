@@ -1,7 +1,7 @@
 <h1 align="center">😎 شخصی سازی 
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel">پنل BPB 💦</a> 
 </h1>
-<h2 align="center">به علت عدم آپدیت کدهای خام BPB این پروژه از ورژن 3.1.3 به بعد را پشتیبانی نمیکند.</h2>
+<h3 align="center">به علت عدم آپدیت کدهای خام BPB این پروژه ورژن های جدید را پشتیبانی نخواهد کرد!</h3>
 
 [**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)   -   [فارسی](https://liMilCo.github.io/BPB-ReCoder/README_fa)
 
@@ -10,7 +10,7 @@
 * Ad: **پروژه ای مشابه**
   * [Free-Internet 🐉](https://github.com/liMilCo/Free-Internet): (ساده ترین و سبک ترین پروژه پروکسی بر روی کلودفلر ورکر)
   * [Tunneling Through 🗽](https://github.com/liMilCo/Free-Internet#tunneling-through): (تونل کردن کلودفلر برای سرورهای فیلتر شده و کانفیگ های رایگان و ایجاد ای-پی ثابت)
-
+جدیدی
 ---
 
 
