@@ -1,7 +1,7 @@
 <h1 align="center">😎 شخصی سازی 
     <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel">پنل BPB 💦</a> 
 </h1>
-<h3 align="center">به علت عدم آپدیت کدهای خام BPB این پروژه ورژن های جدید را پشتیبانی نخواهد کرد!</h3>
+<h3 align="center">😔 نسخه های بالا تر از BPB 3.2.2 پشتیبانی نمی شود! 🙇</h3>
 
 [**English**](https://liMilCo.github.io/BPB-ReCoder/README_en)   -   [فارسی](https://liMilCo.github.io/BPB-ReCoder/README_fa)
 
