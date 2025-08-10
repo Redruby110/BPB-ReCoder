@@ -7,10 +7,22 @@
 
 ---
 
-* Ad: **پروژه ای مشابه**
+## **دسترسی اینترنت برای همه و رایگان**
+
+### 🐉 ساخت سرور رایگان Vless بر روی کلودفلر
   * [Free-Internet 🐉](https://github.com/liMilCo/Free-Internet): (ساده ترین و سبک ترین پروژه پروکسی بر روی کلودفلر ورکر)
   * [Tunneling Through 🗽](https://github.com/liMilCo/Free-Internet#tunneling-through): (تونل کردن کلودفلر برای سرورهای فیلتر شده و کانفیگ های رایگان و ایجاد ای-پی ثابت)
 جدیدی
+
+
+---
+
+### 🎁 کانفیگ رایگان Vless، Vmess، Trojan، ShadowSocks، ShadowSocksR و Hysteria2
+
+* [🎁 Free Proxy Config 🌐](https://limilco.github.io/v2r/): 
+
+هزاران کانفیک که از سرتاسر اینترنت جمع آوری و هر سه روز آپدیت میشود ...
+
 ---
 
 
